@@ -576,6 +576,8 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-label` | `.pf-c-toolbar__item` | Modifies toolbar item to label. |
 | `.pf-m-chip-container` | `.pf-c-toolbar__content`, `.pf-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-toolbar__expandable-content`, `.pf-c-toolbar__toggle` | Modifies the component for the expanded state. |
+| `.pf-m-wrap` | `.pf-c-toolbar__content-section`, `.pf-c-toolbar__group` | Modifies the toolbar element to wrap. |
+| `.pf-m-nowrap` | `.pf-c-toolbar__content-section`, `.pf-c-toolbar__group` | Modifies the toolbar element to nowrap. |
 
 ### Accessibility
 

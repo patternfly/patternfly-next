@@ -1,4 +1,4 @@
-{{#> toolbar-item toolbar-item--modifier="pf-m-overflow-menu"}}
+{{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-overflow-menu ' toolbar-overflow-menu-example--modifier)}}
   {{#> overflow-menu overflow-menu-button--aria-label="Expand overflow menu" overflow-menu--id=(concat toolbar--id '-overflow-menu') dropdown--IsExpanded=toolbar-overflow-menu-example--IsExpanded overflow-menu--modifier=toolbar-demo-overflow-menu--modifier overflow-menu--attribute=toolbar-demo-overflow-menu--attribute}}
 
     {{#if toolbar-overflow-menu-example--content}}

@@ -1,6 +1,6 @@
 // Don't remove this magic comment. See gulpfile.js.
 // @import "../../sass-utilities/all";
-$pf-c-toolbar--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl", "2xl");
+$pf-c-toolbar--breakpoint-map: build-breakpoint-map();
 $pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 
 .pf-c-toolbar {
@@ -165,13 +165,6 @@ $pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     }
   }
 
-  // If pagination is sibling of align-right
-  &.pf-m-align-right ~ *,
-  &.pf-m-align-right ~ .pf-c-toolbar__item,
-  &.pf-m-align-right ~ .pf-c-toolbar__group {
-    margin-left: 0;
-  }
-
   // &:last-child must always come last for spacing system to work properly, as it has the same specificity as the preceding modifiers
   &:last-child {
     --pf-c-toolbar--spacer: 0;
@@ -218,13 +211,6 @@ $pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     .pf-c-pagination {
       flex-wrap: nowrap;
     }
-  }
-
-  // If pagination is sibling of align-right
-  &.pf-m-align-right ~ *,
-  &.pf-m-align-right ~ .pf-c-toolbar__item,
-  &.pf-m-align-right ~ .pf-c-toolbar__group {
-    margin-left: 0;
   }
 
   // &:last-child must always come last for spacing system to work properly, as it has the same specificity as the preceding modifiers
@@ -370,12 +356,20 @@ $pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
       .pf-c-toolbar__item.pf-m-align-right#{$breakpoint-name},
       .pf-c-toolbar__group.pf-m-align-right#{$breakpoint-name} {
         margin-left: auto;
+
+        & ~ .pf-m-pagination {
+          margin-left: 0;
+        }
       }
 
       // Align left
       .pf-c-toolbar__item.pf-m-align-left#{$breakpoint-name},
       .pf-c-toolbar__group.pf-m-align-left#{$breakpoint-name} {
         margin-left: 0;
+
+        & ~ .pf-m-pagination {
+          margin-left: auto;
+        }
       }
 
       // Hidden modifier
@@ -388,6 +382,14 @@ $pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
       .pf-m-visible#{$breakpoint-name} {
         display: flex;
         visibility: visible;
+      }
+
+      .pf-m-nowrap#{$breakpoint-name} {
+        flex-wrap: nowrap;
+      }
+
+      .pf-m-wrap#{$breakpoint-name} {
+        flex-wrap: wrap;
       }
     }
   }
@@ -428,6 +430,7 @@ $pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
     }
   }
 }
+// stylelint-enable
 
 // Override .pf-m-toggle-group margin modifier
 .pf-c-toolbar__content-section > :last-child {
