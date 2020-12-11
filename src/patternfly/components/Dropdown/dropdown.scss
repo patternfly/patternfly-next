@@ -59,7 +59,7 @@
   --pf-c-dropdown--m-top--m-expanded__toggle-icon--Rotate: 180deg;
 
   // Menu
-  --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-dropdown__menu--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-dropdown__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu--PaddingBottom: var(--pf-global--spacer--sm);
@@ -77,12 +77,12 @@
   --pf-c-dropdown__menu-item--FontSize: var(--pf-global--FontSize--md);
   --pf-c-dropdown__menu-item--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-dropdown__menu-item--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-dropdown__menu-item--Color: var(--pf-global--Color--dark-100);
-  --pf-c-dropdown__menu-item--hover--Color: var(--pf-global--Color--dark-100);
-  --pf-c-dropdown__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
+  --pf-c-dropdown__menu-item--Color: var(--pf-global--Color--100);
+  --pf-c-dropdown__menu-item--hover--Color: var(--pf-global--Color--100);
+  --pf-c-dropdown__menu-item--disabled--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-dropdown__menu-item--disabled--BackgroundColor: transparent;
-  --pf-c-dropdown__menu-item--m-text--Color: var(--pf-global--Color--dark-200);
+  --pf-c-dropdown__menu-item--m-text--Color: var(--pf-global--Color--200);
 
   // Menu item icon
   --pf-c-dropdown__menu-item-icon--MarginRight: var(--pf-global--spacer--sm);

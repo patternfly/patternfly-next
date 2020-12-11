@@ -3,7 +3,7 @@
 
 .pf-c-app-launcher {
   // Menu
-  --pf-c-app-launcher__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-app-launcher__menu--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-app-launcher__menu--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-app-launcher__menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-app-launcher__menu--PaddingBottom: var(--pf-global--spacer--sm);
@@ -38,11 +38,11 @@
   --pf-c-app-launcher__menu-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-app-launcher__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-app-launcher__menu-item--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-app-launcher__menu-item--Color: var(--pf-global--Color--dark-100);
+  --pf-c-app-launcher__menu-item--Color: var(--pf-global--Color--100);
   --pf-c-app-launcher__menu-item--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-app-launcher__menu-item--Width: 100%;
   --pf-c-app-launcher__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
-  --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-app-launcher__menu-item--m-link--PaddingRight: 0;
   --pf-c-app-launcher__menu-item--m-link--hover--BackgroundColor: transparent;
   --pf-c-app-launcher__menu-item--m-action--Color: var(--pf-global--disabled-color--200);

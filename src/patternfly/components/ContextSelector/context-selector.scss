@@ -129,8 +129,6 @@
 }
 
 .pf-c-context-selector__menu {
-  @include pf-t-light;
-
   position: absolute;
   top: var(--pf-c-context-selector__menu--Top);
   z-index: var(--pf-c-context-selector__menu--ZIndex);
@@ -150,7 +148,7 @@
 .pf-c-context-selector__menu-footer {
   padding: var(--pf-c-context-selector__menu-footer--PaddingTop) var(--pf-c-context-selector__menu-footer--PaddingRight) var(--pf-c-context-selector__menu-footer--PaddingBottom) var(--pf-c-context-selector__menu-footer--PaddingLeft);
   text-align: right;
-  box-shadow: var(--pf-c-context-selector__menu-footer--BoxShadow);
+  border-top: 1px solid var(--pf-global--palette--black-400);
 }
 
 .pf-c-context-selector__menu-list {

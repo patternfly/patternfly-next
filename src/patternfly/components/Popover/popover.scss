@@ -3,7 +3,6 @@
   --pf-c-popover--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-popover--MinWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--MaxWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
-  --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
 
   // Content
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -15,8 +14,7 @@
   // Arrow
   --pf-c-popover__arrow--Width: var(--pf-global--arrow--width-lg);
   --pf-c-popover__arrow--Height: var(--pf-global--arrow--width-lg);
-  --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow--md);
-  --pf-c-popover__arrow--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-popover__arrow--BackgroundColor: var(--pf-c-popover__content--BackgroundColor);
   --pf-c-popover__arrow--m-top--TranslateX: -50%;
   --pf-c-popover__arrow--m-top--TranslateY: 50%;
   --pf-c-popover__arrow--m-top--Rotate: 45deg;
@@ -46,7 +44,6 @@
   min-width: var(--pf-c-popover--MinWidth);
   max-width: var(--pf-c-popover--MaxWidth);
   font-size: var(--pf-c-popover--FontSize);
-  box-shadow: var(--pf-c-popover--BoxShadow);
 
   &.pf-m-no-padding {
     // Use px values below so the min/max-width calc() doesn't break
@@ -96,6 +93,11 @@
   }
 }
 
+.pf-c-popover,
+.pf-c-popover__arrow {
+  border: 4px solid var(--pf-global--palette--black-400);
+}
+
 .pf-c-popover__content {
   position: relative;
   padding: var(--pf-c-popover__content--PaddingTop) var(--pf-c-popover__content--PaddingRight) var(--pf-c-popover__content--PaddingBottom) var(--pf-c-popover__content--PaddingLeft);
@@ -124,7 +126,6 @@
   height: var(--pf-c-popover__arrow--Height);
   pointer-events: none;
   background-color: var(--pf-c-popover__arrow--BackgroundColor);
-  box-shadow: var(--pf-c-popover__arrow--BoxShadow);
 }
 
 // Body

@@ -19,9 +19,6 @@
   --pf-c-input-group--c-form-control--invalid--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-input-group--c-form-control--MarginRight: 0;
 
-  // This component always needs to be light
-  @include pf-t-light;
-
   display: flex;
   width: 100%;
   background-color: var(--pf-c-input-group--BackgroundColor);

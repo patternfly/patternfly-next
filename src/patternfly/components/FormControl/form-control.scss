@@ -1,3 +1,5 @@
+// stylelint-disable
+
 // Input - success
 $pf-c-form-control--success--Color: $pf-global--success-color--100 !default;
 $pf-c-form-control--success--Coordinates: "M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" !default;
@@ -29,12 +31,12 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   --pf-c-form-control--FontSize: var(--pf-global--FontSize--md);
   --pf-c-form-control--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-form-control--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-form-control--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-form-control--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-form-control--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-form-control--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-form-control--BorderTopColor: transparent;
+  --pf-c-form-control--BorderRightColor: transparent;
+  --pf-c-form-control--BorderBottomColor: var(--pf-global--BorderColor--300);
+  --pf-c-form-control--BorderLeftColor: transparent;
   --pf-c-form-control--BorderRadius: 0;
-  --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-form-control--BackgroundColor: var(--pf-global--palette--black-600);
   --pf-c-form-control--Height: calc(var(--pf-c-form-control--FontSize) * var(--pf-c-form-control--LineHeight) + var(--pf-c-form-control--BorderWidth) * 2 + var(--pf-c-form-control--PaddingTop) + var(--pf-c-form-control--PaddingBottom)); // Needed for various browsers that compute height of form elements differently
 
   // padding
@@ -62,12 +64,12 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   --pf-c-form-control--placeholder--Color: var(--pf-global--Color--dark-200);
 
   // input disabled style
-  --pf-c-form-control--disabled--Color: var(--pf-global--disabled-color--100);
-  --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-form-control--disabled--Color: var(--pf-global--palette--black-100);
+  --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--palette--black-500);
   --pf-c-form-control--disabled--BorderColor: transparent;
 
   // input readonly style
-  --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--palette--black-700);
   --pf-c-form-control--readonly--hover--BorderBottomColor: var(--pf-global--BorderColor--200);
   --pf-c-form-control--readonly--focus--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--sm));
   --pf-c-form-control--readonly--focus--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
@@ -175,22 +177,18 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   // Textarea invalid
   --pf-c-form-control--textarea--invalid--BackgroundPositionY: var(--pf-c-form-control--PaddingLeft); // update to use --pf-c-form-control--inset--base at breaking change
 
-  // This component always needs to be light
-  @include pf-t-light;
-
   width: 100%;
   padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
   font-size: var(--pf-c-form-control--FontSize);
   line-height: var(--pf-c-form-control--LineHeight);
+  color: var(--pf-global--Color--100);
   background-color: var(--pf-c-form-control--BackgroundColor);
   background-repeat: no-repeat;
   border: var(--pf-c-form-control--BorderWidth) solid;
-  border-color: var(--pf-c-form-control--BorderTopColor) var(--pf-c-form-control--BorderRightColor) var(--pf-c-form-control--BorderBottomColor) var(--pf-c-form-control--BorderLeftColor);
+  border-color: transparent transparent var(--pf-c-form-control--BorderBottomColor);
   border-radius: var(--pf-c-form-control--BorderRadius);
-  // stylelint-disable
   -moz-appearance: none;
   -webkit-appearance: none;
-  // stylelint-enable
 
   &::placeholder {
     color: var(--pf-c-form-control--placeholder--Color);
@@ -204,7 +202,8 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   }
 
   &[readonly] {
-    background-color: var(--pf-c-form-control--readonly--BackgroundColor);
+    border-bottom-color: transparent;
+    // background-color: var(--pf-c-form-control--readonly--BackgroundColor);
 
     &:not(.pf-m-success):not([aria-invalid="true"]) {
       &:hover {
@@ -243,6 +242,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
 
     cursor: not-allowed;
     border-color: var(--pf-c-form-control--disabled--BorderColor);
+    color: var(--pf-global--palette--black-100);
   }
 
   &[aria-invalid="true"] {

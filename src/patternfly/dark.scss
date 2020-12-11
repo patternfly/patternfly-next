@@ -1,0 +1,88 @@
+
+// Dark theme
+/* stylelint-disable */
+.ws-preview-html {
+  .pf-c-page {
+    --pf-c-page__sidebar--BackgroundColor: var(--pf-global--palette--black-700);
+    --pf-c-page__header--BackgroundColor: var(--pf-global--palette--black-900);
+  }
+
+  .pf-c-form-control {
+    --pf-c-form-control--BackgroundColor: var(--pf-global--palette--black-600);
+    --pf-c-form-control--BorderTopColor: transparent;
+    --pf-c-form-control--BorderRightColor: transparent;
+    --pf-c-form-control--BorderBottomColor: transparent;
+    --pf-c-form-control--BorderLeftColor: transparent;
+  }
+}
+
+.pf-c-page,
+.pf-c-page [class*="pf-c-"] {
+  // palette
+  --pf-global--palette--black-50: #e7ebeb;
+  --pf-global--palette--black-100: #d3d6d7;
+  --pf-global--palette--black-200: #a9adaf;
+  --pf-global--palette--black-300: #808487;
+  --pf-global--palette--black-400: #565b5f;
+  --pf-global--palette--black-500: #42474b;
+  --pf-global--palette--black-600: #292d32;
+  --pf-global--palette--black-700: #1b1e24;
+  --pf-global--palette--black-800: #12141a;
+  --pf-global--palette--black-900: #05050c;
+  --pf-global--palette--red-9999: #f64747;
+
+  // bg
+  --pf-global--BackgroundColor--100: var(--pf-global--palette--black-700);
+  --pf-global--BackgroundColor--light-100: var(--pf-global--palette--black-700);
+  --pf-global--BackgroundColor--200: var(--pf-global--palette--black-800);
+  --pf-global--BackgroundColor--light-300: var(--pf-global--palette--black-800);
+
+  // border
+  --pf-global--BorderColor--100: var(--pf-global--palette--black-600);
+
+  // state colors
+  --pf-global--primary-color--100: var(--pf-global--palette--blue-300);
+  --pf-global--active-color--100: var(--pf-global--palette--blue-300);
+  --pf-global--success-color--100: var(--pf-global--palette--green-400);
+  --pf-global--warning-color--100: var(--pf-global--palette--gold-300);
+  --pf-global--danger-color--100: var(--pf-global--palette--red-9999);
+
+  --pf-global--BackgroundColor--light-100: white;
+
+  // text
+  --pf-global--Color--100: #fff;
+  --pf-global--Color--light-100: #fff;
+  --pf-global--Color--200: var(--pf-global--palette--black-200);
+
+  color: var(--pf-global--Color--100);
+
+  // components
+  .pf-c-form-control {
+    --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--palette--black-700);
+    --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--palette--black-200);
+  }
+
+  .pf-c-popover {
+    box-shadow: none;
+    border: 1px solid var(--pf-global--palette--black-400);
+  }
+
+  .pf-c-badge.pf-m-read {
+    --pf-c-badge--Color: var(--pf-global--Color--100);
+  }
+
+  .pf-c-chip__text {
+    --pf-c-chip__text--Color: var(--pf-global--palette--black-300);
+  }
+}
+
+.ws-example,
+.ws-lite-example {
+  background: var(--pf-global--palette--black-900) !important;
+}
+
+.ws-preview,
+#main-content {
+  background-color: var(--pf-global--palette--black-700) !important;
+}
+/* stylelint-enable */

@@ -8,9 +8,9 @@
   --pf-c-accordion__toggle--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-accordion__toggle--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-accordion__toggle--before--BackgroundColor: transparent;
-  --pf-c-accordion__toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-accordion__toggle--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-accordion__toggle--active--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-accordion__toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-accordion__toggle--focus--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-accordion__toggle--active--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-accordion__toggle--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-accordion__toggle--m-expanded--before--BackgroundColor: var(--pf-global--primary-color--100);
 
@@ -39,9 +39,6 @@
   --pf-c-accordion__expanded-content-body--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-accordion__expanded-content--m-expanded__expanded-content-body--before--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-accordion__expanded-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
-
-  // This component always needs to be light
-  @include pf-t-light;
 
   background-color: var(--pf-c-accordion--BackgroundColor);
 }

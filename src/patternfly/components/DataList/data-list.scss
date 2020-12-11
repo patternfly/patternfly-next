@@ -138,8 +138,6 @@
   --pf-c-data-list--m-compact__item-action--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-data-list--m-compact__item-content--PaddingBottom: var(--pf-global--spacer--sm);
 
-  @include pf-t-light;
-
   overflow-wrap: break-word;
   list-style-type: disc;
   border-top: var(--pf-c-data-list--BorderTopWidth) solid var(--pf-c-data-list--BorderTopColor);

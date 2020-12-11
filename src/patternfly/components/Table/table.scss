@@ -231,8 +231,6 @@
     --pf-c-table--m-compact--cell--first-last-child--PaddingRight: var(--pf-c-table--m-compact--cell--first-last-child--xl--PaddingRight);
   }
 
-  @include pf-t-light; // This component always needs to be light
-
   // Base
   width: 100%;
   background-color: var(--pf-c-table--BackgroundColor);

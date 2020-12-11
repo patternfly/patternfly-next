@@ -15,7 +15,7 @@
   // Switch input
   --pf-c-switch__input--checked__toggle--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-switch__input--checked__toggle--before--TranslateX: calc(100% + var(--pf-c-switch__toggle-icon--Offset));
-  --pf-c-switch__input--checked__label--Color: var(--pf-global--Color--dark-100);
+  --pf-c-switch__input--checked__label--Color: var(--pf-global--Color--100);
   --pf-c-switch__input--not-checked__label--Color: var(--pf-global--disabled-color--100);
   --pf-c-switch__input--disabled__label--Color: var(--pf-global--disabled-color--100);
   --pf-c-switch__input--disabled__toggle--BackgroundColor: var(--pf-global--Color--dark-200);
@@ -40,7 +40,7 @@
 
   // Switch label
   --pf-c-switch__label--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-switch__label--Color: var(--pf-global--Color--dark-100);
+  --pf-c-switch__label--Color: var(--pf-global--Color--100);
 
   position: relative;
   display: inline-block;

@@ -1,17 +1,18 @@
+// stylelint-disable
 :root {
   // Colors
   // Global palette
-  --pf-global--palette--black-100: #{$pf-color-black-100};
-  --pf-global--palette--black-150: #{$pf-color-black-150};
-  --pf-global--palette--black-200: #{$pf-color-black-200};
-  --pf-global--palette--black-300: #{$pf-color-black-300};
-  --pf-global--palette--black-400: #{$pf-color-black-400};
-  --pf-global--palette--black-500: #{$pf-color-black-500};
-  --pf-global--palette--black-600: #{$pf-color-black-600};
-  --pf-global--palette--black-700: #{$pf-color-black-700};
-  --pf-global--palette--black-800: #{$pf-color-black-800};
-  --pf-global--palette--black-850: #{$pf-color-black-850};
-  --pf-global--palette--black-900: #{$pf-color-black-900};
+  --pf-global--palette--black-50: #e7ebeb;
+  --pf-global--palette--black-100: #d3d6d7;
+  --pf-global--palette--black-200: #a9adaf;
+  --pf-global--palette--black-300: #808487;
+  --pf-global--palette--black-400: #565b5f;
+  --pf-global--palette--black-500: #42474b;
+  --pf-global--palette--black-600: #292d32;
+  --pf-global--palette--black-700: #1b1e24;
+  --pf-global--palette--black-800: #12141a;
+  --pf-global--palette--black-900: #05050c;
+  --pf-global--palette--red-9999: #fe5142;
   --pf-global--palette--black-1000: #{$pf-color-black-1000};
   --pf-global--palette--blue-50: #{$pf-color-blue-50};
   --pf-global--palette--blue-100: #{$pf-color-blue-100};
@@ -83,11 +84,12 @@
   --pf-global--palette--white: #{$pf-color-white};
 
   // Background color
-  --pf-global--BackgroundColor--100: #{$pf-global--BackgroundColor--100};
-  --pf-global--BackgroundColor--200: #{$pf-global--BackgroundColor--200};
-  --pf-global--BackgroundColor--light-100: #{$pf-global--BackgroundColor--light-100};
+  --pf-global--BackgroundColor--100: var(--pf-global--palette--black-700);
+  --pf-global--BackgroundColor--light-100: var(--pf-global--palette--black-700);
+  --pf-global--BackgroundColor--200: var(--pf-global--palette--black-800);
+  --pf-global--BackgroundColor--300: var(--pf-global--palette--black-600);
+  --pf-global--BackgroundColor--light-300: var(--pf-global--palette--black-800);
   --pf-global--BackgroundColor--light-200: #{$pf-global--BackgroundColor--light-200};
-  --pf-global--BackgroundColor--light-300: #{$pf-global--BackgroundColor--light-300};
   --pf-global--BackgroundColor--dark-100: #{$pf-global--BackgroundColor--dark-100};
   --pf-global--BackgroundColor--dark-200: #{$pf-global--BackgroundColor--dark-200};
   --pf-global--BackgroundColor--dark-300: #{$pf-global--BackgroundColor--dark-300};
@@ -96,8 +98,8 @@
   --pf-global--BackgroundColor--dark-transparent-200: #{$pf-global--BackgroundColor--dark-transparent-200};
 
   // Text color
-  --pf-global--Color--100: #{$pf-global--Color--100};
-  --pf-global--Color--200: #{$pf-global--Color--200};
+  --pf-global--Color--100: #fff;
+  --pf-global--Color--200: var(--pf-global--palette--black-200);
   --pf-global--Color--300: #{$pf-global--Color--300};
   --pf-global--Color--400: #{$pf-global--Color--400};
   --pf-global--Color--light-100: #{$pf-global--Color--light-100};
@@ -107,7 +109,7 @@
   --pf-global--Color--dark-200: #{$pf-global--Color--dark-200};
 
   // States color
-  --pf-global--active-color--100: #{$pf-global--active-color--100};
+  --pf-global--active-color--100: var(--pf-global--palette--blue-300);
   --pf-global--active-color--200: #{$pf-global--active-color--200};
   --pf-global--active-color--300: #{$pf-global--active-color--300};
   --pf-global--active-color--400: #{$pf-global--active-color--400};
@@ -116,7 +118,7 @@
   --pf-global--disabled-color--300: #{$pf-global--disabled-color--300};
 
   // Theme color
-  --pf-global--primary-color--100: #{$pf-global--primary-color--100};
+  --pf-global--primary-color--100: var(--pf-global--palette--blue-300);
   --pf-global--primary-color--200: #{$pf-global--primary-color--200};
   --pf-global--primary-color--light-100: #{$pf-global--primary-color--light-100};
   --pf-global--primary-color--dark-100: #{$pf-global--primary-color--dark-100};
@@ -124,13 +126,13 @@
   --pf-global--default-color--100: #{$pf-global--default-color--100};
   --pf-global--default-color--200: #{$pf-global--default-color--200};
   --pf-global--default-color--300: #{$pf-global--default-color--300};
-  --pf-global--success-color--100: #{$pf-global--success-color--100};
+  --pf-global--success-color--100: var(--pf-global--palette--green-400);
   --pf-global--success-color--200: #{$pf-global--success-color--200};
   --pf-global--info-color--100: #{$pf-global--info-color--100};
   --pf-global--info-color--200: #{$pf-global--info-color--200};
-  --pf-global--warning-color--100: #{$pf-global--warning-color--100};
+  --pf-global--warning-color--100: var(--pf-global--palette--gold-300);
   --pf-global--warning-color--200: #{$pf-global--warning-color--200};
-  --pf-global--danger-color--100: #{$pf-global--danger-color--100};
+  --pf-global--danger-color--100: var(--pf-global--palette--red-9999);
   --pf-global--danger-color--200: #{$pf-global--danger-color--200};
   --pf-global--danger-color--300: #{$pf-global--danger-color--300};
 
@@ -197,8 +199,8 @@
   --pf-global--breakpoint--2xl: #{$pf-global--breakpoint--2xl};
 
   // Links
-  --pf-global--link--Color: #{$pf-global--link--Color};
-  --pf-global--link--Color--hover: #{$pf-global--link--Color--hover};
+  --pf-global--link--Color: var(--pf-global--palette--blue-300);
+  --pf-global--link--Color--hover: var(--pf-global--palette--blue-200);
   --pf-global--link--Color--light: #{$pf-global--link--Color--light};
   --pf-global--link--Color--light--hover: #{$pf-global--link--Color--light--hover};
   --pf-global--link--Color--dark: #{$pf-global--link--Color--dark};
@@ -211,7 +213,7 @@
   --pf-global--BorderWidth--md: #{$pf-global--BorderWidth--md};
   --pf-global--BorderWidth--lg: #{$pf-global--BorderWidth--lg};
   --pf-global--BorderWidth--xl: #{$pf-global--BorderWidth--xl};
-  --pf-global--BorderColor--100: #{$pf-global--BorderColor--100};
+  --pf-global--BorderColor--100: var(--pf-global--palette--black-600);
   --pf-global--BorderColor--200: #{$pf-global--BorderColor--200};
   --pf-global--BorderColor--300: #{$pf-global--BorderColor--300};
   --pf-global--BorderColor--dark-100: #{$pf-global--BorderColor--dark-100};
@@ -280,4 +282,31 @@
   --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--overpass--monospace);
   --pf-global--FontWeight--semi-bold: var(--pf-global--FontWeight--overpass--semi-bold);
   --pf-global--FontWeight--bold: var(--pf-global--FontWeight--overpass--bold);
+}
+
+
+
+.pf-c-page,
+.pf-c-page [class*="pf-c-"] {
+  .pf-c-badge.pf-m-read {
+    --pf-c-badge--Color: var(--pf-global--Color--100);
+  }
+
+  .pf-c-chip__text {
+    --pf-c-chip__text--Color: var(--pf-global--palette--black-300);
+  }
+}
+
+.ws-example,
+.ws-lite-example {
+  background: var(--pf-global--palette--black-900) !important;
+}
+
+.ws-preview,
+#main-content {
+  background-color: var(--pf-global--palette--black-800) !important;
+}
+
+.ws-page-sidebar.pf-c-page__sidebar {
+  background: white;
 }

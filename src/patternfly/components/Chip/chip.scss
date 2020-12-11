@@ -3,7 +3,7 @@
   --pf-c-chip--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-chip--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-chip--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-chip--BackgroundColor: var(--pf-global--Color--light-100);
+  --pf-c-chip--BackgroundColor: var(--pf-global--palette--black-900);
   --pf-c-chip--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip--before--BorderColor: var(--pf-global--BorderColor--300);
   --pf-c-chip--before--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -19,7 +19,7 @@
 
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-chip__text--Color: var(--pf-global--Color--100);
+  --pf-c-chip__text--Color: var(--pf-global--palette--black-800);
   --pf-c-chip__text--MaxWidth: 16ch;
 
   // chip button

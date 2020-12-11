@@ -1,7 +1,6 @@
 .pf-c-tooltip {
   // Component variables
   --pf-c-tooltip--MaxWidth: #{pf-size-prem(300px)};
-  --pf-c-tooltip--BoxShadow: var(--pf-global--BoxShadow--md);
 
   // Content variables
   --pf-c-tooltip__content--PaddingTop: var(--pf-global--spacer--sm);
@@ -9,7 +8,7 @@
   --pf-c-tooltip__content--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-tooltip__content--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-tooltip__content--Color: var(--pf-global--Color--light-100);
-  --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+  --pf-c-tooltip__content--BackgroundColor: var(--pf-global--palette--black-500);
   --pf-c-tooltip__content--FontSize: var(--pf-global--FontSize--sm);
 
   // Arrow variables
@@ -30,7 +29,6 @@
 
   position: relative;
   max-width: var(--pf-c-tooltip--MaxWidth);
-  box-shadow: var(--pf-c-tooltip--BoxShadow);
 
   &.pf-m-top {
     .pf-c-tooltip__arrow {
