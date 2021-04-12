@@ -75,9 +75,6 @@
   --pf-c-accordion--m-bordered__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-accordion--m-bordered__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomColor: var(--pf-global--BorderColor--100);
 
-  // This component always needs to be light
-  @include pf-t-light;
-
   background-color: var(--pf-c-accordion--BackgroundColor);
 
   &.pf-m-display-lg {

@@ -72,8 +72,6 @@
   // Inline info
   --pf-c-alert--m-inline--m-info--BackgroundColor: var(--pf-global--palette--blue-50);
 
-  @include pf-t-light; // This component always needs to be light
-
   position: relative;
   display: grid;
   padding: var(--pf-c-alert--PaddingTop) var(--pf-c-alert--PaddingRight) var(--pf-c-alert--PaddingBottom) var(--pf-c-alert--PaddingLeft);
