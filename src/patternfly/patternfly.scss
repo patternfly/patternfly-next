@@ -40,12 +40,10 @@
   --pf-global--palette--red-8888: #fe6a5d;
 
   // background colors
-  --pf-global--BackgroundColor--100: var(--pf-global--palette--black-800);
-  --pf-global--BackgroundColor--200: var(--pf-global--palette--black-900);
+  --pf-global--BackgroundColor--100: var(--pf-global--palette--black-800); // primary
+  --pf-global--BackgroundColor--200: var(--pf-global--palette--black-900); // secondary
   --pf-global--BackgroundColor--300: var(--pf-global--palette--black-700); // floaty
   --pf-global--BackgroundColor--400: var(--pf-global--palette--black-600); // form control & menu item hover (on floaty bg)
-  --pf-global--BackgroundColor--light-300: var(--pf-global--BackgroundColor--300);
-  --pf-global--BackgroundColor--light-200: var(--pf-global--BackgroundColor--200);
   --pf-global--BorderColor--100: var(--pf-global--palette--black-500);
   --pf-global--BorderColor--200: var(--pf-global--palette--black-500);
   --pf-global--BorderColor--300: var(--pf-global--palette--black-400);
@@ -64,6 +62,30 @@
   --pf-global--disabled-color--100: var(--pf-global--palette--black-400); // disabled text on regular background color
   --pf-global--disabled-color--200: var(--pf-global--palette--black-500); // disabled background color
   --pf-global--disabled-color--300: var(--pf-global--palette--black-200); // disabled text on disabled background color
+
+  // theme color resets
+  --pf-global--Color--dark-100: var(--pf-global--Color--100);
+  --pf-global--Color--dark-200: var(--pf-global--Color--200);
+  --pf-global--Color--light-100: var(--pf-global--Color--100);
+  --pf-global--Color--light-200: var(--pf-global--Color--200);
+  --pf-global--Color--light-300: var(--pf-global--Color--300);
+  --pf-global--BorderColor--dark-100: var(--pf-global--BorderColor--100);
+  --pf-global--BorderColor--light-100: var(--pf-global--BorderColor--100);
+  --pf-global--primary-color--light-100: var(--pf-global--primary-color--100);
+  --pf-global--primary-color--dark-100: var(--pf-global--primary-color--100);
+  --pf-global--link--Color--light: var(--pf-global--link--Color);
+  --pf-global--link--Color--light--hover: var(--pf-global--link--Color--hover);
+  --pf-global--link--Color--dark: var(--pf-global--link--Color);
+  --pf-global--link--Color--dark--hover: var(--pf-global--link--Color--hover);
+  --pf-global--BackgroundColor--light-100: var(--pf-global--BackgroundColor--100);
+  --pf-global--BackgroundColor--light-200: var(--pf-global--BackgroundColor--200);
+  --pf-global--BackgroundColor--light-300: var(--pf-global--BackgroundColor--300);
+  --pf-global--BackgroundColor--dark-100: var(--pf-global--BackgroundColor--100);
+  --pf-global--BackgroundColor--dark-200: var(--pf-global--BackgroundColor--200);
+  --pf-global--BackgroundColor--dark-300: var(--pf-global--BackgroundColor--300);
+  --pf-global--BackgroundColor--dark-400: var(--pf-global--BackgroundColor--400);
+  --pf-global--icon--Color--light: var(--pf-global--palette--black-200);
+  --pf-global--icon--Color--dark: var(--pf-global--palette--black-200);
 }
 
 .pf-c-accordion {
@@ -90,6 +112,42 @@
 .pf-c-app-launcher {
   --pf-c-app-launcher__menu--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-app-launcher__menu--Top: 100%;
+  --pf-c-app-launcher__menu-item--Color: var(--pf-global--Color--100);
   --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
   --pf-c-app-launcher__menu-item--disabled--Color: var(--pf-global--palette--black-300); // question should we have a global var for this
+  --pf-c-app-launcher__menu-item--m-action--Color: var(--pf-global--Color--200);
+  --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color: var(--pf-global--palette--gold-300);
+  --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--hover--Color: var(--pf-global--palette--gold-100);
+  --pf-c-app-launcher__group-title--Color: var(--pf-global--Color--200);
+}
+
+.pf-c-badge {
+  --pf-c-badge--m-read--BackgroundColor: var(--pf-global--palette--black-500);
+  --pf-c-badge--m-unread--BackgroundColor: var(--pf-global--palette--blue-400);
+}
+
+.pf-c-banner {
+  &.pf-m-info,
+  &.pf-m-danger,
+  &.pf-m-success,
+  &.pf-m-warning {
+    color: var(--pf-global--palette--black-900);
+  }
+}
+
+.pf-c-breadcrumb {
+  --pf-c-breadcrumb__item-divider--Color: var(--pf-global--BorderColor--100);
+}
+
+.pf-c-button {
+  --pf-c-button--disabled--Color: var(--pf-global--disabled-color--300);
+  --pf-c-button--m-primary--BackgroundColor: var(--pf-global--palette--blue-400); // should blue-400 be a primary-color?
+  --pf-c-button--m-tertiary--after--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-button--m-tertiary--Color: var(--pf-global--palette--black-100); // global variable for this?
+  --pf-c-button--m-tertiary--hover--after--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-button--m-tertiary--hover--Color: var(--pf-global--palette--black-100);
+  --pf-c-button--m-tertiary--focus--after--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-button--m-tertiary--focus--Color: var(--pf-global--palette--black-100);
+  --pf-c-button--m-tertiary--active--after--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-button--m-tertiary--active--Color: var(--pf-global--palette--black-100);
 }
