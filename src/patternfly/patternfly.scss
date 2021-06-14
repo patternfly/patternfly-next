@@ -229,3 +229,43 @@
     border: 0;
   }
 }
+
+.pf-c-code-editor {
+  .pf-c-code-editor__controls {
+    > * + * {
+      border-left: 1px solid var(--pf-global--palette--black-700);
+    }
+  }
+}
+
+.pf-c-context-selector {
+  --pf-c-context-selector__menu--Top: 100%;
+
+  .pf-c-context-selector__toggle {
+    background: var(--pf-global--palette--black-600);
+  }
+
+  .pf-c-context-selector__menu {
+    background: var(--pf-global--palette--black-600);
+  }
+
+  .pf-c-context-selector__menu-footer {
+    border-top: 1px solid var(--pf-global--BorderColor--300);
+
+    // --pf-c-context-selector__menu-footer--BoxShadow: 0 -1px 0 0 var(--pf-global--BorderColor--300); (another way of changing a shadow to a border)
+  }
+}
+
+.pf-c-data-list {
+  --pf-c-data-list--BorderTopColor: var(--pf-global--BorderColor--100);
+  --pf-c-data-list--sm--BorderTopColor: var(--pf-global--BorderColor--100);
+  --pf-c-data-list__item--BorderBottomColor: var(--pf-global--BorderColor--100);
+  --pf-c-data-list__item--sm--BorderBottomColor: var(--pf-global--BorderColor--100);
+}
+
+.pf-c-date-picker {
+  --pf-c-date-picker__calendar--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-date-picker__calendar--Top: 100%;
+  --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-drawer__splitter--BackgroundColor: transparent;
+}
