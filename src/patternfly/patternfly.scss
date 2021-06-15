@@ -242,11 +242,11 @@
   --pf-c-context-selector__menu--Top: 100%;
 
   .pf-c-context-selector__toggle {
-    background: var(--pf-global--palette--black-600);
+    background: var(--pf-global--BackgroundColor--400);
   }
 
   .pf-c-context-selector__menu {
-    background: var(--pf-global--palette--black-600);
+    background: var(--pf-global--BackgroundColor--300);
   }
 
   .pf-c-context-selector__menu-footer {
@@ -268,4 +268,113 @@
   --pf-c-date-picker__calendar--Top: 100%;
   --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--400);
   --pf-c-drawer__splitter--BackgroundColor: transparent;
+}
+
+.pf-c-drawer {
+  --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-drawer__splitter--BackgroundColor: transparent;
+
+  &.pf-m-inline,
+  &.pf-m-static {
+    --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  }
+}
+
+.pf-c-dropdown {
+  --pf-c-dropdown__toggle--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-dropdown__toggle--before--BorderTopColor: transparent;
+  --pf-c-dropdown__toggle--before--BorderRightColor: transparent;
+  --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-global--BorderColor--400);
+  --pf-c-dropdown__toggle--before--BorderLeftColor: transparent;
+  --pf-c-dropdown__toggle--disabled--BackgroundColor: var(--pf-global--palette--black-500);
+  --pf-c-dropdown__toggle--m-primary--BackgroundColor: var(--pf-global--palette--blue-400);
+  --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-dropdown__menu--Top: 100%;
+  --pf-c-dropdown--m-top__menu--TranslateY: -100%;
+  --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
+
+  .pf-c-dropdown__toggle {
+    &:not(.pf-m-plain) {
+      &:disabled,
+      &.pf-m-disabled {
+        color: var(--pf-global--palette--black-100); // should be a global var?
+      }
+    }
+
+    &.pf-m-plain {
+      background: transparent;
+    }
+  }
+}
+
+.pf-c-form {
+  --pf-c-form__helper-text--m-success--Color: var(--pf-global--success-color--100);
+}
+
+.pf-c-form-control {
+  $pf-c-form-control__select--BackgroundColor: "#fff"; // needs to come before pf css
+
+  --pf-c-form-control__select--BackgroundUrl: #{pf-bg-svg($pf-c-form-control__select--Coordinates, $pf-c-form-control__select--ViewBox, $svg-color: $pf-c-form-control__select--BackgroundColor)};
+  --pf-c-form-control--BorderTopColor: transparent;
+  --pf-c-form-control--BorderRightColor: transparent;
+  --pf-c-form-control--BorderBottomColor: var(--pf-global--BorderColor--400);
+  --pf-c-form-control--BorderLeftColor: transparent;
+  --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-form-control--disabled--Color: var(--pf-global--disabled-color--300);
+  --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--BackgroundColor--400);
+
+  color: var(--pf-global--Color--100);
+
+  // chrome's calendar icon for type="date"
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+
+  &[readonly] {
+    border-bottom-color: var(--pf-global--palette--black-700); // should be a var?
+  }
+
+  &:disabled {
+    color: var(--pf-global--palette--black-100); // global var
+  }
+}
+
+.pf-c-hint {
+  --pf-c-hint--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-hint--BorderColor: var(--pf-global--BorderColor--300);
+}
+
+.pf-c-input-group {
+  --pf-c-input-group__text--BorderTopColor: transparent;
+  --pf-c-input-group__text--BorderRightColor: transparent;
+  --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--400);
+  --pf-c-input-group__text--BorderLeftColor: transparent;
+  --pf-c-input-group__text--BackgroundColor: var(--pf-global--palette--black-600);
+
+  > * + * {
+    margin-left: 0;
+    border-left: 1px solid var(--pf-global--palette--black-700); // global var
+  }
+
+  .pf-c-input-group__text {
+    --pf-c-input-group__text--BorderTopColor: transparent;
+    --pf-c-input-group__text--BorderRightColor: transparent;
+    --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--400);
+    --pf-c-input-group__text--BorderLeftColor: transparent;
+
+    &.pf-m-plain {
+      --pf-c-input-group__text--BackgroundColor: transparent;
+    }
+  }
+}
+
+.pf-c-label {
+  --pf-c-label--BackgroundColor: var(--pf-global--palette--black-150);
+  --pf-c-label__content--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-label__content--before--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-label__content--link--hover--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-label__content--link--focus--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-label--m-blue__content--Color: var(--pf-global--info-color--200);
+  --pf-c-label--m-blue__content--before--BorderColor: var(--pf-global--palette--blue-100);
 }
