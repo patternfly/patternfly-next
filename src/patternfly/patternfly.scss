@@ -12,18 +12,6 @@
   background-color: var(--pf-global--BackgroundColor--200) !important;
 }
 
-.ws-page-sidebar.pf-c-page__sidebar {
-  background: white;
-}
-
-.ws-table tr {
-  border-bottom: 1px solid var(--pf-global--BorderColor--300) !important;
-}
-
-.ws-table {
-  display: none !important;
-}
-
 :root {
   // palette changes
   --pf-global--palette--black-50: #e0e0e0;
@@ -114,13 +102,13 @@
 .pf-c-app-launcher {
   --pf-c-app-launcher__menu--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-app-launcher__menu--Top: 100%;
-  --pf-c-app-launcher__menu-item--Color: var(--pf-global--Color--100);
   --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
   --pf-c-app-launcher__menu-item--disabled--Color: var(--pf-global--palette--black-300); // question should we have a global var for this
   --pf-c-app-launcher__menu-item--m-action--Color: var(--pf-global--Color--200);
   --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color: var(--pf-global--palette--gold-300);
   --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--hover--Color: var(--pf-global--palette--gold-100);
-  --pf-c-app-launcher__group-title--Color: var(--pf-global--Color--200);
+  --pf-c-app-launcher__group-title--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-app-launcher__group-title--FontWeight: var(--pf-global--FontWeight--normal);
 }
 
 .pf-c-badge {
@@ -598,4 +586,17 @@
   --pf-c-toggle-group__button--focus--BackgroundColor: var(--pf-global--palette--black-700);
   --pf-c-toggle-group__button--disabled--BackgroundColor: var(--pf-global--palette--black-600);
   --pf-c-toggle-group__button--disabled--Color: var(--pf-global--palette--black-100);
+  --pf-c-toggle-group__button--m-selected--BackgroundColor: var(--pf-global--primary-color--300);
+}
+
+.pf-c-tooltip {
+  --pf-c-tooltip--BoxShadow: none;
+  --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--300);
+}
+
+.pf-c-wizard {
+  --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--disabled-color--300);
+  --pf-c-wizard__nav-link--m-disabled--before--Color: var(--pf-global--disabled-color--300);
+  --pf-c-wizard__nav--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-wizard__outer-wrap--BackgroundColor: var(--pf-global--BackgroundColor--300);
 }
