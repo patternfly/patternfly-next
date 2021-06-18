@@ -5,7 +5,9 @@ wrapperTag: div
 ---
 
 ## Demos
+
 ### Basic
+
 ```hbs isFullscreen
 {{#> page page--id="page-layout-table-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -38,6 +40,7 @@ wrapperTag: div
 ```
 
 ### Sortable
+
 ```hbs isFullscreen
 {{#> page page--id="page-layout-table-sortable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -57,17 +60,16 @@ wrapperTag: div
       {{> table-main-section-content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-      {{#> card}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true" toolbar--template--HasIconButtonGroup="true"}}
-        {{> table-sortable-table}}
-        {{> table-pagination-footer}}
-      {{/card}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true" toolbar--template--HasIconButtonGroup="true"}}
+      {{> table-sortable-table}}
+      {{> table-pagination-footer}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
 
 ### Expandable
+
 ```hbs isFullscreen
 {{#> page page--id="page-layout-table-expandable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -87,17 +89,16 @@ wrapperTag: div
       {{> table-main-section-content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-      {{#> card}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasExpandAll="true"}}
-        {{> table-expandable-table}}
-        {{> table-pagination-footer}}
-      {{/card}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasExpandAll="true"}}
+      {{> table-expandable-table}}
+      {{> table-pagination-footer}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
 
 ### Compact
+
 ```hbs isFullscreen
 {{#> page page--id="page-layout-table-compact"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -117,17 +118,16 @@ wrapperTag: div
       {{> table-main-section-content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-      {{#> card}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
-        {{> table-compact-table}}
-        {{> table-pagination-footer}}
-      {{/card}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> table-compact-table}}
+      {{> table-pagination-footer}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
 
 ### Compound expansion
+
 ```hbs isFullscreen
 {{#> page page--id="page-layout-table-compound-expansion"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -147,17 +147,16 @@ wrapperTag: div
       {{> table-main-section-content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-      {{#> card}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
-        {{> table-compound-expansion-table}}
-        {{> table-pagination-footer}}
-      {{/card}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> table-compound-expansion-table}}
+      {{> table-pagination-footer}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
 
 ### Loading state demo
+
 ```hbs isFullscreen
 {{#> page page--id="table-loading-demo"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -177,15 +176,14 @@ wrapperTag: div
       {{> table-main-section-content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-      {{#> card}}
-        {{> table-loading-table}}
-      {{/card}}
+      {{> table-loading-table}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
 
 ### Empty state
+
 ```hbs isFullscreen
 {{#> page page--id="table-empty-state-demo"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -205,15 +203,14 @@ wrapperTag: div
       {{> table-main-section-content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-      {{#> card}}
-        {{> table-empty-state-table}}
-      {{/card}}
+      {{> table-empty-state-table}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
 
 ### Static bottom pagination
+
 ```hbs isFullscreen
 {{#> page page--id="static-bottom-pagination"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -233,17 +230,16 @@ wrapperTag: div
       {{> table-main-section-content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-      {{#> card}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
-        {{> table-simple-table}}
-        {{> table-pagination-footer-static}}
-      {{/card}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> table-simple-table}}
+      {{> table-pagination-footer-static}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
 
 ### Column management modal
+
 ```hbs isFullscreen
 {{#> page page--id="page-layout-table-simple-compact-pagination-modal-open"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -263,10 +259,8 @@ wrapperTag: div
       {{> table-main-section-content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-      {{#> card}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
-        {{> table-simple-table}}
-      {{/card}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> table-simple-table}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -305,6 +299,7 @@ wrapperTag: div
 ```
 
 ### Sticky header
+
 ```hbs isFullscreen
 {{#> page page--id="page-layout-table-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -324,11 +319,9 @@ wrapperTag: div
       {{> table-main-section-content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-      {{#> card}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
-        {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header"}}
-        {{> table-pagination-footer}}
-      {{/card}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header"}}
+      {{> table-pagination-footer}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
