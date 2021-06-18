@@ -145,7 +145,7 @@ cssPrefix: pf-c-calendar-month
       {{#> calendar-month-dates-row}}
         {{> calendar-month-dates-cell calendar-month-date--date="27" calendar-month-dates-cell--IsInRange="true"}}
         {{> calendar-month-dates-cell calendar-month-date--date="28" calendar-month-dates-cell--IsInRange="true"}}
-        {{> calendar-month-dates-cell calendar-month-date--date="29" calendar-month-dates-cell--IsEndRange="true" calendar-month-dates-cell--IsInRange="true" calendar-month-date--modifier="pf-m-hover"}}
+        {{> calendar-month-dates-cell calendar-month-date--date="29" calendar-month-dates-cell--IsSelected="true" calendar-month-dates-cell--IsEndRange="true" calendar-month-dates-cell--IsInRange="true" calendar-month-date--modifier="pf-m-hover"}}
         {{> calendar-month-dates-cell calendar-month-date--date="30"}}
         {{> calendar-month-dates-cell calendar-month-date--date="31"}}
         {{> calendar-month-dates-cell calendar-month-date--date="1" calendar-month-dates-cell--IsAdjacentMonth="true"}}
@@ -197,7 +197,7 @@ cssPrefix: pf-c-calendar-month
         {{> calendar-month-dates-cell calendar-month-date--date="8"}}
         {{> calendar-month-dates-cell calendar-month-date--date="9" calendar-month-dates-cell--IsCurrent="true"}}
         {{> calendar-month-dates-cell calendar-month-date--date="10"}}
-        {{> calendar-month-dates-cell calendar-month-date--date="11" calendar-month-dates-cell--IsStartRange="true" calendar-month-dates-cell--IsInRange="true" calendar-month-date--modifier="pf-m-focus"}}
+        {{> calendar-month-dates-cell calendar-month-date--date="11" calendar-month-dates-cell--IsStartRange="true" calendar-month-dates-cell--IsSelected="true" calendar-month-dates-cell--IsInRange="true" calendar-month-date--modifier="pf-m-focus"}}
         {{> calendar-month-dates-cell calendar-month-date--date="12" calendar-month-dates-cell--IsInRange="true"}}
       {{/calendar-month-dates-row}}
       {{#> calendar-month-dates-row}}

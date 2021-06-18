@@ -14,6 +14,7 @@
 
 :root {
   // palette changes
+  --pf-global--palette--blue-300: #1fa7f8;
   --pf-global--palette--black-50: #e0e0e0;
   --pf-global--palette--black-100: #c6c7c8;
   --pf-global--palette--black-200: #aaabac;
@@ -45,6 +46,7 @@
   --pf-global--primary-color--300: var(--pf-global--palette--blue-400); // primary blue with white text on top for contrast
   --pf-global--success-color--100: var(--pf-global--palette--green-400);
   --pf-global--warning-color--100: var(--pf-global--palette--gold-400);
+  --pf-global--warning-color--200: var(--pf-global--palette--gold-300);
   --pf-global--danger-color--100: var(--pf-global--palette--red-9999);
   --pf-global--danger-color--200: var(--pf-global--palette--red-8888);
   --pf-global--link--Color: var(--pf-global--palette--blue-300);
@@ -52,6 +54,9 @@
   --pf-global--disabled-color--100: var(--pf-global--palette--black-400); // disabled text on regular background color
   --pf-global--disabled-color--200: var(--pf-global--palette--black-500); // disabled background color
   --pf-global--disabled-color--300: var(--pf-global--palette--black-200); // disabled text on disabled background color
+
+  // icons
+  --pf-global--icon--Color--light: var(--pf-global--palette--black-300);
 
   // theme color resets
   --pf-global--Color--dark-100: var(--pf-global--Color--100);
@@ -179,8 +184,10 @@
   --pf-c-calendar-month__dates-cell--m-in-range__date--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-calendar-month__date--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-calendar-month__date--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-calendar-month__dates-cell--m-selected__date--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-calendar-month__dates-cell--m-selected__date--focus--BackgroundColor: var(--pf-global--primary-color--300);
+
+  --pf-c-calendar-month__date--focus--after--BorderColor: transparent;
+  --pf-c-calendar-month__dates-cell--m-selected__date--hover--BackgroundColor: var(--pf-global--palette--black-900);
+  --pf-c-calendar-month__dates-cell--m-selected__date--focus--BackgroundColor: var(--pf-global--palette--blue-400);
 
   .pf-c-calendar-month__date {
     &:hover,
@@ -193,6 +200,7 @@
     &.pf-m-focus {
       --pf-c-calendar-month__date--after--BorderColor: var(--pf-global--active-color--100);
       --pf-c-calendar-month__date--after--BorderWidth: var(--pf-global--BorderWidth--sm);
+      --pf-c-calendar-month__date--BackgroundColor: var(--pf-global--primary-color--300);
     }
   }
 }
