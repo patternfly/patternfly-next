@@ -24,7 +24,9 @@
   @include pf-t-dark;
   @include pf-text-overflow;
 
-  padding: var(--pf-c-banner--PaddingTop) var(--pf-c-banner--PaddingRight) var(--pf-c-banner--PaddingBottom) var(--pf-c-banner--PaddingLeft);
+  padding:
+    var(--pf-c-banner--PaddingTop) var(--pf-c-banner--PaddingRight) var(--pf-c-banner--PaddingBottom)
+    var(--pf-c-banner--PaddingLeft);
   flex-shrink: 0;
   font-size: var(--pf-c-banner--FontSize);
   color: var(--pf-c-banner--Color);
@@ -56,5 +58,29 @@
     top: 0;
     z-index: var(--pf-c-banner--m-sticky--ZIndex);
     box-shadow: var(--pf-c-banner--m-sticky--BoxShadow);
+  }
+}
+
+.pf-c-banner-link {
+  display: inline;
+  width: 100%;
+  font-size: var(--pf-c-banner--FontSize);
+  color: var(--pf-c-banner--Color);
+  text-decoration: underline;
+  border: none;
+
+  &:hover {
+    font-weight: var(--pf-global--FontWeight--semi-bold);
+    color: var(--pf-c-banner--Color);
+  }
+
+  &:focus {
+    font-weight: var(--pf-global--FontWeight--semi-bold);
+    color: var(--pf-c-banner--Color);
+  }
+
+  &:active {
+    font-weight: var(--pf-global--FontWeight--semi-bold);
+    color: var(--pf-c-banner--Color);
   }
 }
