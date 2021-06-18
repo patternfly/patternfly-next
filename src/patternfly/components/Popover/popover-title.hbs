@@ -1,0 +1,31 @@
+<{{#if popover-title--type}}{{popover-title--type}}{{else}}h1{{/if}} class="pf-c-popover__title{{#if popover-title--IsIcon}} pf-m-icon{{/if}}{{#if popover-title--modifier}} {{popover-title--modifier}}{{/if}}"
+  {{#if popover-title--attribute}}
+    {{{popover-title--attribute}}}
+  {{/if}}>
+  {{#if popover-title--IsIcon}}
+    {{> popover-title-icon}}
+  {{/if}}
+  {{#if popover--IsAlert}}
+    <span class="pf-u-screen-reader">
+      {{#if popover--IsDefaultAlert}}
+        Default
+      {{else if popover--IsInfoAlert}}
+        Info
+      {{else if popover--IsSuccessAlert}}
+        Success
+      {{else if popover--IsWarningAlert}}
+        Warning
+      {{else if popover--IsDangerAlert}}
+        Danger
+      {{/if}}
+      alert:
+    </span>
+  {{/if}}
+  {{#if popover-title--IsIcon}}
+    {{#> popover-title-text}}
+      {{> @partial-block}}
+    {{/popover-title-text}}
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
+</{{#if popover-title--type}}{{popover-title--type}}{{else}}h1{{/if}}>

@@ -1,0 +1,18 @@
+<span class="pf-c-popover__title-icon{{#if popover-title-icon--modifier}} {{popover-title-icon--modifier}}{{/if}}"
+  {{#if popover-title-icon--attribute}}
+    {{{popover-title-icon--attribute}}}
+  {{/if}}>
+  {{#if popover--IsDefaultAlert}}
+    <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
+  {{else if popover--IsInfoAlert}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{else if popover--IsSuccessAlert}}
+    <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
+  {{else if popover--IsWarningAlert}}
+    <i class="fas fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
+  {{else if popover--IsDangerAlert}}
+    <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
+  {{else}}
+    <i class="fas fa-fw fa-{{popover-title-icon--type}}" aria-hidden="true"></i>
+  {{/if}}
+</span>
