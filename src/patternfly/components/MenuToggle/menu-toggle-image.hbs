@@ -1,0 +1,10 @@
+<span class="pf-c-menu-toggle__image{{#if menu-toggle-image--modifier}} {{menu-toggle-image--modifier}}{{/if}}"
+  {{#if menu-toggle-image--attribute}}
+    {{{menu-toggle-image--attribute}}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+  {{/if}}
+</span>

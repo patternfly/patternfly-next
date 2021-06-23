@@ -1,0 +1,44 @@
+{{#> page page--id=masthead-demo--page--id}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#' page--id '-main"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{> @partial-block}}
+
+  {{!-- Nav --}}
+  {{#> page-sidebar page-sidebar--IsAside="true"}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"')}}
+      {{#> nav-list}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            System panel
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Policy
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Authentication
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Network services
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Server
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-list}}
+    {{/nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="' page--id '-main"')}}
+    {{#> page-template-breadcrumb}}{{/page-template-breadcrumb}}
+    {{#> page-template-title}}{{/page-template-title}}
+    {{#> page-template-gallery}}{{/page-template-gallery}}
+  {{/page-main}}
+{{/page}}

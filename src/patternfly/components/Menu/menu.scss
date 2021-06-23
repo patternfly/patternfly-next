@@ -23,6 +23,8 @@
   --pf-c-menu__content--Height: auto;
 
   // Divider
+  --pf-c-menu--c-divider--MarginTop: 0;
+  --pf-c-menu--c-divider--MarginBottom: 0;
   --pf-c-menu__list--c-divider--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-menu__list--c-divider--MarginBottom: var(--pf-global--spacer--sm);
 
@@ -32,17 +34,31 @@
   --pf-c-menu__header--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-menu__header--PaddingLeft: var(--pf-global--spacer--md);
 
+  // Header > item
+  --pf-c-menu__header--c-menu__item--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-menu__header--c-menu__item--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-menu__header--c-menu__item--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-menu__header--c-menu__item--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-menu__header--c-menu__item--BackgroundColor: transparent;
+  --pf-c-menu__header--c-menu__item--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-menu__header--c-menu__item--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
+
   // Search
   --pf-c-menu__search--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-menu__search--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-menu__search--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-menu__search--PaddingLeft: var(--pf-global--spacer--md);
 
+  // Header + search
+  --pf-c-menu__header--c-menu__search--PaddingTop: 0;
+
   // List
+  --pf-c-menu__list--Display: block;
   --pf-c-menu__list--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-menu__list--PaddingBottom: var(--pf-global--spacer--sm);
 
   // List item
+  --pf-c-menu__list-item--Display: flex;
   --pf-c-menu__list-item--Color: var(--pf-global--Color--100);
   --pf-c-menu__list-item--BackgroundColor: transparent;
   --pf-c-menu__list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
@@ -62,6 +78,9 @@
   --pf-c-menu__list-item--m-load__item--Color: var(--pf-global--link--Color);
 
   // Group
+  --pf-c-menu__group--Display: block;
+
+  // Group title
   --pf-c-menu__group-title--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-menu__group-title--PaddingRight: var(--pf-c-menu__item--PaddingRight);
   --pf-c-menu__group-title--PaddingLeft: var(--pf-c-menu__item--PaddingLeft);
@@ -158,6 +177,11 @@
     }
   }
 
+  .pf-c-divider {
+    margin-top: var(--pf-c-menu--c-divider--MarginTop);
+    margin-bottom: var(--pf-c-menu--c-divider--MarginBottom);
+  }
+
   &.pf-m-flyout {
     overflow: visible;
 
@@ -238,8 +262,8 @@
       transition: var(--pf-c-menu--m-drilldown__list--Transition);
     }
 
+    // stylelint-disable selector-max-class, max-nesting-depth
     .pf-c-menu__list-item {
-      // stylelint-disable selector-max-class
       &.pf-m-current-path .pf-c-menu {
         z-index: var(--pf-c-menu--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex);
       }
@@ -247,7 +271,16 @@
       &.pf-m-current-path > .pf-c-menu {
         overflow: visible;
       }
-      // stylelint-enable
+
+      &.pf-m-static {
+        > .pf-c-menu {
+          position: static;
+        }
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
 
       &:not(.pf-m-current-path) .pf-c-menu {
         visibility: hidden;
@@ -258,6 +291,7 @@
       outline-offset: var(--pf-c-menu__item--OutlineOffset);
     }
   }
+  // stylelint-enable
 
   // stylelint-disable selector-max-class
   &.pf-m-drilled-in > .pf-c-menu__content > .pf-c-menu__list {
@@ -296,10 +330,36 @@
 
 // Header
 .pf-c-menu__header {
+  --pf-c-menu__item--PaddingTop: var(--pf-c-menu__header--c-menu__item--PaddingTop);
+  --pf-c-menu__item--PaddingRight: var(--pf-c-menu__header--c-menu__item--PaddingRight);
+  --pf-c-menu__item--PaddingBottom: var(--pf-c-menu__header--c-menu__item--PaddingBottom);
+  --pf-c-menu__item--PaddingLeft: var(--pf-c-menu__header--c-menu__item--PaddingLeft);
+
   padding-top: var(--pf-c-menu__header--PaddingTop);
   padding-right: var(--pf-c-menu__header--PaddingRight);
   padding-bottom: var(--pf-c-menu__header--PaddingBottom);
   padding-left: var(--pf-c-menu__header--PaddingLeft);
+
+  > .pf-c-menu__item {
+    --pf-c-menu__item--BackgroundColor: var(--pf-c-menu__header--c-menu__item--BackgroundColor);
+
+    margin-top: calc(var(--pf-c-menu__header--PaddingTop) * -1 / 2);
+    margin-right: calc(var(--pf-c-menu__header--PaddingRight) * -1);
+    margin-bottom: calc(var(--pf-c-menu__header--PaddingBottom) * -1 / 2);
+    margin-left: calc(var(--pf-c-menu__header--PaddingLeft) * -1);
+
+    &:hover {
+      --pf-c-menu__item--BackgroundColor: var(--pf-c-menu__header--c-menu__item--hover--BackgroundColor);
+    }
+
+    &:focus {
+      --pf-c-menu__item--BackgroundColor: var(--pf-c-menu__header--c-menu__item--focus--BackgroundColor);
+    }
+  }
+
+  + .pf-c-menu__search {
+    --pf-c-menu__search--PaddingTop: var(--pf-c-menu__header--c-menu__search--PaddingTop);
+  }
 }
 
 // Search
@@ -312,10 +372,12 @@
 
 // List
 .pf-c-menu__list {
+  @include pf-hidden-visible(var(--pf-c-menu__list--Display));
+
   padding-top: var(--pf-c-menu__list--PaddingTop);
   padding-bottom: var(--pf-c-menu__list--PaddingBottom);
 
-  .pf-c-divider {
+  > .pf-c-divider {
     margin-top: var(--pf-c-menu__list--c-divider--MarginTop);
     margin-bottom: var(--pf-c-menu__list--c-divider--MarginBottom);
   }
@@ -323,7 +385,8 @@
 
 // List item
 .pf-c-menu__list-item {
-  display: flex;
+  @include pf-hidden-visible(var(--pf-c-menu__list-item--Display));
+
   color: var(--pf-c-menu__list-item--Color);
   background-color: var(--pf-c-menu__list-item--BackgroundColor);
 
@@ -401,7 +464,6 @@
   width: 100%;
 }
 
-
 .pf-c-menu__item-external-icon {
   margin-left: var(--pf-c-menu__item-external-icon--MarginLeft);
   font-size: var(--pf-c-menu__item-external-icon--FontSize);
@@ -417,6 +479,11 @@
 }
 
 // Group
+.pf-c-menu__group {
+  @include pf-hidden-visible(var(--pf-c-menu__group--Display));
+}
+
+// Group title
 .pf-c-menu__group-title {
   padding-top: var(--pf-c-menu__group-title--PaddingTop);
   padding-right: var(--pf-c-menu__group-title--PaddingRight);

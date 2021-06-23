@@ -145,6 +145,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown--m-full-height__toggle--expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-dropdown--m-full-height__toggle--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-dropdown--m-full-height__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-dropdown--m-full-height__toggle--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-dropdown--m-full-height__toggle--PaddingLeft: var(--pf-global--spacer--lg);
+
 
   position: relative;
   display: inline-block;
@@ -167,6 +170,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-full-height {
+    --pf-c-dropdown__toggle--PaddingRight: var(--pf-c-dropdown--m-full-height__toggle--PaddingRight);
+    --pf-c-dropdown__toggle--PaddingLeft: var(--pf-c-dropdown--m-full-height__toggle--PaddingLeft);
     --pf-c-dropdown__toggle--active--before--BorderBottomWidth: var(--pf-c-dropdown--m-full-height__toggle--active--before--BorderBottomWidth);
     --pf-c-dropdown__toggle--focus--before--BorderBottomWidth: var(--pf-c-dropdown--m-full-height__toggle--focus--before--BorderBottomWidth);
     --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-c-dropdown--m-full-height__toggle--expanded--before--BorderBottomWidth);
@@ -420,7 +425,6 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   position: absolute;
   top: var(--pf-c-dropdown__menu--Top);
   z-index: var(--pf-c-dropdown__menu--ZIndex);
-  min-width: 100%;
   padding-top: var(--pf-c-dropdown__menu--PaddingTop);
   padding-bottom: var(--pf-c-dropdown__menu--PaddingBottom);
   background: var(--pf-c-dropdown__menu--BackgroundColor);
@@ -430,6 +434,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
 .pf-c-menu,
 .pf-c-dropdown__menu {
+  min-width: 100%;
+
   @each $breakpoint, $breakpoint-value in $pf-c-dropdown--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 

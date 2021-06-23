@@ -189,13 +189,17 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 }
 
 // Header
+.pf-c-page__header,
+.pf-c-page > .pf-c-masthead {
+  grid-area: header;
+}
+
 .pf-c-page__header {
   @include pf-t-dark; // force the container to follow the dark theme
 
   z-index: var(--pf-c-page__header--ZIndex);
   grid-template-columns: auto auto;
   display: grid;
-  grid-area: header;
   align-items: center;
   min-width: 0;
   min-height: var(--pf-c-page__header--MinHeight);

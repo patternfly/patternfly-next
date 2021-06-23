@@ -1,0 +1,20 @@
+{{#> context-selector context-selector--modifier="pf-m-full-height" context-selector--id=(concat masthead--id '-context-selector') context-selector--label-text="Selected project" context-selector--IsExpandedqqq="true"}}
+  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
+    {{#> context-selector-toggle-text}}
+      Context selector
+    {{/context-selector-toggle-text}}
+    {{> context-selector-toggle-icon}}
+  {{/context-selector-toggle}}
+  {{#> context-selector-menu}}
+    {{#> context-selector-menu-search}}
+      {{#> input-group}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search"' 'placeholder="Search"' 'id="' context-selector--id 'textInput1"' 'name="' context-selector--id 'textInput1"' 'aria-labelledby="' context-selector--id '-search-button"')}}
+        {{/form-control}}
+        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
+          <i class="fas fa-search" aria-hidden="true"></i>
+        {{/button}}
+      {{/input-group}}
+    {{/context-selector-menu-search}}
+    {{> __context-selector-menu-menu}}
+  {{/context-selector-menu}}
+{{/context-selector}}

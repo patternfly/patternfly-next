@@ -1,0 +1,143 @@
+{{#> menu menu--modifier="pf-m-drilldown pf-m-align-right"}}
+  {{#> menu-content menu-content--attribute=''}}
+    {{#> menu-group menu-group--modifier="pf-m-hidden-on-sm"}}
+      {{#> menu-list}}
+        {{#> menu-list-item menu-list-item--IsDisabled="true"}}
+          {{#> menu-item}}
+            {{#> menu-item-description}}
+              <div class="pf-u-font-size-sm">Username:</div>
+              <div class="pf-u-font-size-md">mshaksho@redhat.com</div>
+            {{/menu-item-description}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item menu-list-item--IsDisabled="true"}}
+          {{#> menu-item}}
+            {{#> menu-item-description}}
+              <div class="pf-u-font-size-sm">Account number:</div>
+              <div class="pf-u-font-size-md">123456789</div>
+            {{/menu-item-description}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{> divider divider--type="li"}}
+        {{> menu-list-item menu-list-item--text="My profile"}}
+        {{> menu-list-item menu-list-item--text="User management"}}
+        {{> menu-list-item menu-list-item--text="Logout"}}
+      {{/menu-list}}
+    {{/menu-group}}
+    {{> divider divider--modifier="pf-m-hidden-on-sm"}}
+    {{#> menu-group}}
+      {{#> menu-list}}
+        {{#> menu-list-item menu--IsDrilledInReset="true" menu-list-item--IsExpandable="true" menu-list-item--text="Settings" menu-list-item--IsDrillDown="true" menu-list-item--icon="cog"}}
+          {{#> menu menu--IsSubmenu="true" menu--modifier="" menu--id=(concat menu--id  '-list-1') menu--attribute=''}}
+            {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Settings" menu-list-item--icon="cog"}}
+            {{> divider divider--type="li"}}
+            {{> menu-list-item newcontext menu-list-item--text="Customer support" menu-item--IsLink="true"}}
+            {{> menu-list-item newcontext menu-list-item--text="About" menu-item--IsLink="true"}}
+          {{/menu}}
+        {{/menu-list-item}}
+
+        {{#> menu-list-item menu--IsDrilledInReset="true" menu-list-item--IsExpandable="true" menu-list-item--text="Help" menu-list-item--IsDrillDown="true" menu-list-item--icon="pf-icon pf-icon-help"}}
+          {{#> menu menu--IsSubmenu="true" menu--modifier="" menu--id=(concat menu--id  '-list-2') menu--attribute=''}}
+            {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Help" menu-list-item--icon="pf-icon pf-icon-help"}}
+            {{> divider divider--type="li"}}
+            {{> menu-list-item newcontext menu-list-item--text="Support options" menu-item--IsLink="true"}}
+            {{> menu-list-item newcontext menu-list-item--text="Open support case" menu-item--IsLink="true"}}
+            {{> menu-list-item newcontext menu-list-item--text="API documentation" menu-item--IsLink="true"}}
+          {{/menu}}
+        {{/menu-list-item}}
+
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-icon}}
+                <i class="fas fa-fw fa-th" aria-hidden="true"></i>
+              {{/menu-item-icon}}
+              {{#> menu-item-text}}
+                Application launcher
+              {{/menu-item-text}}
+              {{> menu-item-toggle-icon}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+          {{#> menu menu--modifier="" menu--id=(concat menu--id  '-list-3') menu--attribute=''}}
+            {{#> menu-header}}
+              {{#> menu-item}}
+                {{#> menu-item-main}}
+                  {{> menu-item-toggle-icon menu-item-toggle-icon--IsDrillup="true"}}
+                  {{#> menu-item-icon}}
+                    <i class="fas fa-fw fa-th" aria-hidden="true"></i>
+                  {{/menu-item-icon}}
+                  {{#> menu-item-text}}
+                    Application launcher
+                  {{/menu-item-text}}
+                {{/menu-item-main}}
+              {{/menu-item}}
+            {{/menu-header}}
+            {{#> menu-search}}
+              {{#> menu-search-input}}
+                {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' menu--id '-search-input" name="' menu--id '-search-input" aria-label="Search"')}}
+              {{/menu-search-input}}
+            {{/menu-search}}
+            {{> divider}}
+            {{#> menu-group}}
+              {{#> menu-group-title}}
+                Favorites
+              {{/menu-group-title}}
+              {{#> menu-list}}
+                {{#> menu-list-item newcontext}}
+                  {{#> menu-item menu-item--IsLink="true"}}
+                    {{#> menu-item-main}}
+                      {{#> menu-item-text}}
+                        Link 1
+                      {{/menu-item-text}}
+                    {{/menu-item-main}}
+                  {{/menu-item}}
+                  {{> menu-item-action menu-item-action--IsFavorite="true" menu-item-action--IsFavorited="true"}}
+                {{/menu-list-item}}
+                {{#> menu-list-item newcontext}}
+                  {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
+                    {{#> menu-item-main}}
+                      {{#> menu-item-text}}
+                        Link 2
+                      {{/menu-item-text}}
+                      {{> menu-item-external-icon}}
+                    {{/menu-item-main}}
+                  {{/menu-item}}
+                  {{> menu-item-action menu-item-action--IsFavorite="true"}}
+                {{/menu-list-item}}
+              {{/menu-list}}
+            {{/menu-group}}
+            {{> divider}}
+            {{#> menu-group}}
+              {{#> menu-group-title}}
+                Group 1
+              {{/menu-group-title}}
+              {{#> menu-list}}
+                {{#> menu-list-item newcontext}}
+                  {{#> menu-item menu-item--IsLink="true"}}
+                    {{#> menu-item-main}}
+                      {{#> menu-item-text}}
+                        Link 1
+                      {{/menu-item-text}}
+                    {{/menu-item-main}}
+                  {{/menu-item}}
+                  {{> menu-item-action menu-item-action--IsFavorite="true"}}
+                {{/menu-list-item}}
+                {{#> menu-list-item newcontext}}
+                  {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
+                    {{#> menu-item-main}}
+                      {{#> menu-item-text}}
+                        Link 2
+                      {{/menu-item-text}}
+                      {{> menu-item-external-icon}}
+                    {{/menu-item-main}}
+                  {{/menu-item}}
+                  {{> menu-item-action menu-item-action--IsFavorite="true" menu-item-action--IsFavorited="true"}}
+                {{/menu-list-item}}
+              {{/menu-list}}
+            {{/menu-group}}
+          {{/menu}}
+        {{/menu-list-item}}
+      {{/menu-list}}
+    {{/menu-group}}
+  {{/menu-content}}
+{{/menu}}

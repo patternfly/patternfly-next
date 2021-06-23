@@ -1,4 +1,4 @@
-<header class="pf-c-masthead{{#if masthead--modifier}} {{masthead--modifier}}{{/if}}"
+<{{#if masthead--type}}{{masthead--type}}{{else}}header{{/if}} class="pf-c-masthead{{#if masthead--modifier}} {{masthead--modifier}}{{/if}}"
   {{#if masthead--id}}
     id="{{masthead--id}}"
   {{/if}}
@@ -6,4 +6,4 @@
     {{{masthead--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</header>
+</{{#if masthead--type}}{{masthead--type}}{{else}}header{{/if}}>

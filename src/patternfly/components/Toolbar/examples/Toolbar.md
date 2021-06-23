@@ -240,6 +240,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `--pf-c-toolbar__item--Width{-on-[breakpoint]}: {width}` | `.pf-c-toolbar__item` |  Modifies the width value of a toolbar item. |
+| `--pf-c-toolbar__item--MinWidth{-on-[breakpoint]}: {width}` | `.pf-c-toolbar__item` |  Modifies the min width value of a toolbar item. |
 
 ### Group types
 ```hbs
