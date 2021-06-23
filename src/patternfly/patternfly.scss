@@ -171,7 +171,7 @@ $pf-global--danger-color--200: $pf-color-red-8888;
   --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color: var(--pf-global--palette--gold-300);
   --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--hover--Color: var(--pf-global--palette--gold-100);
   --pf-c-app-launcher__group-title--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-app-launcher__group-title--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-app-launcher__group-title--FontWeight: var(--pf-global--FontWeight--bold);
 }
 
 .pf-c-badge {
@@ -351,6 +351,8 @@ $pf-global--danger-color--200: $pf-color-red-8888;
   --pf-c-dropdown__menu--Top: 100%;
   --pf-c-dropdown--m-top__menu--TranslateY: -100%;
   --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-dropdown__group-title--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-dropdown__group-title--FontWeight: var(--pf-global--FontWeight--bold);
 
   .pf-c-dropdown__toggle {
     &:not(.pf-m-plain) {
@@ -441,6 +443,17 @@ $pf-global--danger-color--200: $pf-color-red-8888;
   --pf-c-menu__list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
   --pf-c-menu__list-item--focus-within--BackgroundColor: var(--pf-global--BackgroundColor--400);
   --pf-c-menu__list-item--m-disabled__item--Color: var(--pf-global--Color--200); // global var?
+  --pf-c-menu__group-title--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-menu__group-title--FontSize: var(--pf-global--FontSize--xs);
+}
+
+.pf-c-menu-toggle {
+  --pf-c-menu-toggle--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--before--BorderTopColor: transparent;
+  --pf-c-menu-toggle--before--BorderRightColor: transparent;
+  --pf-c-menu-toggle--before--BorderBottomColor: var(--pf-global--BorderColor--400);
+  --pf-c-menu-toggle--before--BorderLeftColor: transparent;
+  --pf-c-menu-toggle--disabled--BackgroundColor: var(--pf-global--palette--black-500);
 }
 
 .pf-c-modal-box {
