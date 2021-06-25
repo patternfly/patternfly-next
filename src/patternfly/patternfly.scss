@@ -449,11 +449,22 @@ $pf-global--danger-color--200: $pf-color-red-8888;
 
 .pf-c-menu-toggle {
   --pf-c-menu-toggle--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--active--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--focus--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--m-expanded--BackgroundColor: var(--pf-global--BackgroundColor--400);
   --pf-c-menu-toggle--before--BorderTopColor: transparent;
   --pf-c-menu-toggle--before--BorderRightColor: transparent;
-  --pf-c-menu-toggle--before--BorderBottomColor: var(--pf-global--BorderColor--400);
+  --pf-c-menu-toggle--before--BorderBottomColor: transparent;
   --pf-c-menu-toggle--before--BorderLeftColor: transparent;
+  --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-global--BorderColor--400);
   --pf-c-menu-toggle--disabled--BackgroundColor: var(--pf-global--palette--black-500);
+  --pf-c-menu-toggle--disabled--Color: var(--pf-global--palette--black-100);
+  --pf-c-menu-toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--300);
+
+  &.pf-m-plain {
+    background: transparent;
+  }
 }
 
 .pf-c-modal-box {
@@ -516,6 +527,27 @@ $pf-global--danger-color--200: $pf-color-red-8888;
   --pf-c-notification-drawer__group-toggle--BackgroundColor: var(--pf-global--BackgroundColor--300);
 }
 
+.pf-c-options-menu {
+  --pf-c-options-menu__toggle--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-options-menu__toggle--BorderTopColor: transparent;
+  --pf-c-options-menu__toggle--BorderRightColor: transparent;
+  --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-global--BorderColor--400);
+  --pf-c-options-menu__toggle--BorderLeftColor: transparent;
+  --pf-c-options-menu__toggle--disabled--BackgroundColor: var(--pf-global--palette--black-500);
+  --pf-c-options-menu__menu--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-options-menu__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-options-menu__group-title--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-options-menu__group-title--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-options-menu__menu--Top: 100%;
+
+
+  .pf-c-options-menu__toggle {
+    &.pf-m-plain {
+      background: transparent;
+    }
+  }
+}
+
 .pf-c-page {
   --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -541,16 +573,34 @@ $pf-global--danger-color--200: $pf-color-red-8888;
     }
   }
 
-  &.pf-m-sticky-top,
-  &.pf-m-sticky-bottom {
-    &,
-    .pf-c-page__main-nav,
-    .pf-c-page__main-breadcrumb,
-    .pf-c-page__main-section,
-    .pf-c-page__main-wizard,
-    .pf-c-page__main-group {
-      // stylelint-disable-next-line
-      background-color: var(--pf-global--BackgroundColor--300) !important;
+  .pf-c-page__main-nav {
+    &.pf-m-sticky-top,
+    &.pf-m-sticky-bottom {
+      --pf-c-page__main-nav--BackgroundColor: var(--pf-global--BackgroundColor--300);
+    }
+  }
+
+  .pf-c-page__main-breadcrumb {
+    &.pf-m-sticky-top,
+    &.pf-m-sticky-bottom {
+      --pf-c-page__main-breadcrumb--BackgroundColor: var(--pf-global--BackgroundColor--300);
+    }
+  }
+
+  .pf-c-page__main-group {
+    &.pf-m-sticky-top,
+    &.pf-m-sticky-bottom {
+      --pf-c-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--300);
+      --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--300);
+      --pf-c-page__main-breadcrumb--BackgroundColor: var(--pf-global--BackgroundColor--300);
+      --pf-c-page__main-nav--BackgroundColor: var(--pf-global--BackgroundColor--300);
+    }
+  }
+
+  .pf-c-page__main-section {
+    &.pf-m-sticky-top,
+    &.pf-m-sticky-bottom {
+      --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--300);
     }
   }
 }
@@ -564,7 +614,7 @@ $pf-global--danger-color--200: $pf-color-red-8888;
   --pf-c-popover__arrow--BoxShadow: none;
   --pf-c-popover__arrow--BackgroundColor: var(--pf-c-popover__content--BackgroundColor);
 
-  .pf-c-popover,
+  &,
   .pf-c-popover__arrow {
     border: 4px solid var(--pf-global--BorderColor--400);
   }
@@ -572,8 +622,8 @@ $pf-global--danger-color--200: $pf-color-red-8888;
 
 .pf-c-progress {
   --pf-c-progress--m-inside__measure--Color: var(--pf-global--palette--black-900);
-  --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--Color--100);
-  --pf-c-progress--m-inside__measure--Color: var(--pf-global--Color--100);
+  --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--palette--black-900);
+  --pf-c-progress--m-warning--m-inside__measure--Color: var(--pf-global--palette--black-900);
 }
 
 .pf-c-search-input {
@@ -590,11 +640,23 @@ $pf-global--danger-color--200: $pf-color-red-8888;
 }
 
 .pf-c-select {
+  --pf-c-select__toggle--disabled--BackgroundColor: var(--pf-global--palette--black-500);
   --pf-c-select__toggle--BackgroundColor: var(--pf-global--BackgroundColor--400);
   --pf-c-select__toggle--before--BorderTopColor: transparent;
   --pf-c-select__toggle--before--BorderRightColor: transparent;
   --pf-c-select__toggle--before--BorderBottomColor: var(--pf-global--BorderColor--400);
   --pf-c-select__toggle--before--BorderLeftColor: transparent;
+  --pf-c-select__menu--Top: 100%;
+  --pf-c-select__menu--m-top--TranslateY: -100%;
+  --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-select__menu--BackgroundColor: var(--pf-global--BackgroundColor--300);
+
+  .pf-c-select__toggle {
+    &:disabled,
+    &.pf-m-disabled {
+      color: var(--pf-global--palette--black-100);
+    }
+  }
 }
 
 .pf-c-simple-list {
