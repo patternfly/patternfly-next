@@ -139,6 +139,9 @@ $pf-global--danger-color--200: $pf-color-red-8888;
   --pf-global--BoxShadow--xl-bottom: 0 1rem 1rem -0.5rem rgba(3, 3, 3, 0.8);
   --pf-global--BoxShadow--xl-left: -1rem 0 1rem -0.5rem rgba(3, 3, 3, 0.8);
   --pf-global--BoxShadow--inset: inset 0 0 0.625rem 0 rgba(3, 3, 3, 1);
+
+  // makes scrollbar dark
+  color-scheme: dark;
 }
 
 .pf-c-accordion {
@@ -552,7 +555,7 @@ $pf-global--danger-color--200: $pf-color-red-8888;
 .pf-c-page {
   --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-page__header--BackgroundColor: var(--pf-global--palette--black-900);
+  --pf-c-page__header--BackgroundColor: var(--pf-global--palette--black-1000);
 
   .pf-c-page__header-tools-item {
     &.pf-m-selected {
