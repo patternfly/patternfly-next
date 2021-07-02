@@ -100,8 +100,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-section--xl--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-page__main-breadcrumb--main-section--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
   --pf-c-page__main-section--m-dark-200--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
   --pf-c-page__main-breadcrumb--page__main-tabs--PaddingTop: var(--pf-global--spacer--md);
