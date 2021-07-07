@@ -779,6 +779,11 @@ $pf-global--danger-color--200: $pf-color-red-8888;
   --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--300);
 }
 
+.pf-c-tree-view {
+  --pf-c-tree-view__node--hover--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-tree-view__node--focus--BackgroundColor: var(--pf-global--BackgroundColor--300);
+}
+
 .pf-c-wizard {
   --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--disabled-color--300);
   --pf-c-wizard__nav-link--m-disabled--before--Color: var(--pf-global--disabled-color--300);
