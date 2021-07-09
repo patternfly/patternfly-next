@@ -143,6 +143,14 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderBottomColor: var(--pf-global--palette--black-600);
   --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderLeftColor: var(--pf-global--palette--black-600);
 
+  // Toolbar
+  --pf-c-masthead--c-toolbar__content--PaddingRight: 0;
+  --pf-c-masthead--c-toolbar__content--PaddingLeft: 0;
+  --pf-c-masthead--c-toolbar__expandable-content--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-masthead--c-toolbar__expandable-content--PaddingRight: var(--pf-c-masthead--inset);
+  --pf-c-masthead--c-toolbar__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-masthead--c-toolbar__expandable-content--PaddingLeft: var(--pf-c-masthead--inset);
+
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
   }
@@ -181,16 +189,8 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 
   .pf-c-toolbar {
-    --pf-c-toolbar__content--PaddingRight: 0;
-    --pf-c-toolbar__content--PaddingLeft: 0;
-
-    --pf-c-masthead--c-toolbar__expandable-content--PaddingTop: var(--pf-global--spacer--md);
-    --pf-c-masthead--c-toolbar__expandable-content--PaddingRight: var(--pf-c-masthead--inset);
-    --pf-c-masthead--c-toolbar__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
-    --pf-c-masthead--c-toolbar__expandable-content--PaddingLeft: var(--pf-c-masthead--inset);
-
-    --pf-c-toolbar--PaddingTop: var(--pf-c-masthead--c-toolbar--PaddingTop);
-    --pf-c-toolbar--PaddingBottom: var(--pf-c-masthead--c-toolbar--PaddingBottom);
+    --pf-c-toolbar__content--PaddingRight: var(--pf-c-masthead--c-toolbar__content--PaddingRight);
+    --pf-c-toolbar__content--PaddingLeft: var(--pf-c-masthead--c-toolbar__content--PaddingLeft);
     --pf-c-toolbar__expandable-content--PaddingTop: var(--pf-c-masthead--c-toolbar__expandable-content--PaddingTop);
     --pf-c-toolbar__expandable-content--PaddingRight: var(--pf-c-masthead--c-toolbar__expandable-content--PaddingRight);
     --pf-c-toolbar__expandable-content--PaddingBottom: var(--pf-c-masthead--c-toolbar__expandable-content--PaddingBottom);
