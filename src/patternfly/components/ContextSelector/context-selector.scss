@@ -7,7 +7,8 @@
   --pf-c-context-selector__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-context-selector__toggle--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-context-selector__toggle--BorderWidth: var(--pf-global--BorderWidth--sm); // remove at breaking change
+  --pf-c-context-selector__toggle--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-context-selector__toggle--BorderTopColor: var(--pf-global--BorderColor--300); // remove at breaking change
   --pf-c-context-selector__toggle--BorderRightColor: var(--pf-global--BorderColor--300); // remove at breaking change
   --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-global--BorderColor--200); // remove at breaking change
@@ -95,6 +96,8 @@
   --pf-c-context-selector__menu-item-icon--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Full height
+  --pf-c-context-selector--m-full-height__toggle--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-context-selector--m-full-height__toggle--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-context-selector--m-full-height__toggle--before--BorderTopWidth: 0;
   --pf-c-context-selector--m-full-height__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-context-selector--m-full-height__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
@@ -107,6 +110,8 @@
   &.pf-m-full-height {
     --pf-c-context-selector__toggle--active--BorderBottomWidth: var(--pf-c-context-selector--m-full-height__toggle--active--BorderBottomWidth);
     --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-c-context-selector--m-full-height__toggle--expanded--BorderBottomWidth);
+    --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector--m-full-height__toggle--PaddingRight);
+    --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector--m-full-height__toggle--PaddingLeft);
 
     display: inline-flex;
     align-items: center;

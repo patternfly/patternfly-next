@@ -109,6 +109,48 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--m-light-200--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-masthead--m-light-200__main--BorderBottomColor: var(--pf-global--BorderColor--100);
 
+  // Toolbar item
+  --pf-c-masthead--c-toolbar__item--Display: flex;
+
+  // Context selector
+  --pf-c-masthead--c-context-selector--Width: auto;
+  --pf-c-masthead--c-context-selector__toggle--BorderTopColor: transparent;
+  --pf-c-masthead--c-context-selector__toggle--BorderRightColor: transparent;
+  --pf-c-masthead--c-context-selector__toggle--BorderBottomColor: transparent;
+  --pf-c-masthead--c-context-selector__toggle--BorderLeftColor: transparent;
+  --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderTopColor: var(--pf-global--palette--black-600);
+  --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderRightColor: var(--pf-global--palette--black-600);
+  --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderBottomColor: var(--pf-global--palette--black-600);
+  --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderLeftColor: var(--pf-global--palette--black-600);
+
+  // Dropdown
+  --pf-c-masthead--c-dropdown__toggle--before--BorderTopColor: transparent;
+  --pf-c-masthead--c-dropdown__toggle--before--BorderRightColor: transparent;
+  --pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor: transparent;
+  --pf-c-masthead--c-dropdown__toggle--before--BorderLeftColor: transparent;
+  --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderTopColor: var(--pf-global--palette--black-600);
+  --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderRightColor: var(--pf-global--palette--black-600);
+  --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderBottomColor: var(--pf-global--palette--black-600);
+  --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderLeftColor: var(--pf-global--palette--black-600);
+
+  // Menu toggle
+  --pf-c-masthead--c-menu-toggle--before--BorderTopColor: transparent;
+  --pf-c-masthead--c-menu-toggle--before--BorderRightColor: transparent;
+  --pf-c-masthead--c-menu-toggle--before--BorderBottomColor: transparent;
+  --pf-c-masthead--c-menu-toggle--before--BorderLeftColor: transparent;
+  --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderTopColor: var(--pf-global--palette--black-600);
+  --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderRightColor: var(--pf-global--palette--black-600);
+  --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderBottomColor: var(--pf-global--palette--black-600);
+  --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderLeftColor: var(--pf-global--palette--black-600);
+
+  // Toolbar
+  --pf-c-masthead--c-toolbar__content--PaddingRight: 0;
+  --pf-c-masthead--c-toolbar__content--PaddingLeft: 0;
+  --pf-c-masthead--c-toolbar__expandable-content--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-masthead--c-toolbar__expandable-content--PaddingRight: var(--pf-c-masthead--inset);
+  --pf-c-masthead--c-toolbar__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-masthead--c-toolbar__expandable-content--PaddingLeft: var(--pf-c-masthead--inset);
+
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
   }
@@ -147,31 +189,91 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 
   .pf-c-toolbar {
-    --pf-c-toolbar--PaddingTop: var(--pf-c-masthead--c-toolbar--PaddingTop);
-    --pf-c-toolbar--PaddingBottom: var(--pf-c-masthead--c-toolbar--PaddingBottom);
+    --pf-c-toolbar__content--PaddingRight: var(--pf-c-masthead--c-toolbar__content--PaddingRight);
+    --pf-c-toolbar__content--PaddingLeft: var(--pf-c-masthead--c-toolbar__content--PaddingLeft);
+    --pf-c-toolbar__expandable-content--PaddingTop: var(--pf-c-masthead--c-toolbar__expandable-content--PaddingTop);
+    --pf-c-toolbar__expandable-content--PaddingRight: var(--pf-c-masthead--c-toolbar__expandable-content--PaddingRight);
+    --pf-c-toolbar__expandable-content--PaddingBottom: var(--pf-c-masthead--c-toolbar__expandable-content--PaddingBottom);
+    --pf-c-toolbar__expandable-content--PaddingLeft: var(--pf-c-masthead--c-toolbar__expandable-content--PaddingLeft);
 
     width: 100%;
   }
 
-  .pf-c-toolbar__content-section {
-    flex-wrap: nowrap;
-    min-width: 0;
-  }
-
-  .pf-c-toolbar__group,
-  .pf-c-toolbar__item {
+  .pf-c-toolbar,
+  .pf-c-toolbar__content,
+  .pf-c-toolbar__content-section,
+  .pf-c-toolbar__expandable-content,
+  .pf-c-toolbar__group {
     min-width: 0;
   }
 
   .pf-c-toolbar,
+  .pf-c-toolbar__content {
+    position: static;
+  }
+
+  .pf-c-toolbar__content-section {
+    flex-wrap: nowrap;
+  }
+
+  .pf-c-toolbar__expandable-content {
+    position: absolute;
+    border-top: 1px solid #464646;
+  }
+
+  .pf-c-toolbar,
+  .pf-c-toolbar__content,
+  .pf-c-toolbar__content-section,
   .pf-c-toolbar__group,
   .pf-c-toolbar__item {
     align-self: stretch;
   }
 
   .pf-c-toolbar__item {
-    display: flex;
+    --pf-c-toolbar__item--Display: var(--pf-c-masthead--c-toolbar__item--Display);
+
     align-items: center;
+  }
+
+  .pf-c-menu-toggle {
+    --pf-c-menu-toggle--before--BorderTopColor: var(--pf-c-masthead--c-menu-toggle--before--BorderTopColor);
+    --pf-c-menu-toggle--before--BorderRightColor: var(--pf-c-masthead--c-menu-toggle--before--BorderRightColor);
+    --pf-c-menu-toggle--before--BorderBottomColor: var(--pf-c-masthead--c-menu-toggle--before--BorderBottomColor);
+    --pf-c-menu-toggle--before--BorderLeftColor: var(--pf-c-masthead--c-menu-toggle--before--BorderLeftColor);
+
+    &.pf-m-full-height {
+      --pf-c-menu-toggle--before--BorderTopColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderTopColor);
+      --pf-c-menu-toggle--before--BorderRightColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderRightColor);
+      --pf-c-menu-toggle--before--BorderBottomColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderBottomColor);
+      --pf-c-menu-toggle--before--BorderLeftColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderLeftColor);
+    }
+  }
+
+  .pf-c-context-selector {
+    --pf-c-context-selector--Width: var(--pf-c-masthead--c-context-selector--Width);
+    --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--c-context-selector__toggle--BorderTopColor);
+    --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector__toggle--BorderRightColor);
+    --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector__toggle--BorderLeftColor);
+
+    &.pf-m-full-height {
+      --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--c-context-selector--m-full-height__toggle--BorderTopColor);
+      --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector--m-full-height__toggle--BorderRightColor);
+      --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector--m-full-height__toggle--BorderLeftColor);
+    }
+  }
+
+  .pf-c-dropdown {
+    --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderTopColor);
+    --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderRightColor);
+    --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor);
+    --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderLeftColor);
+
+    &.pf-m-full-height {
+      --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderTopColor);
+      --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderRightColor);
+      --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderBottomColor);
+      --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderLeftColor);
+    }
   }
 }
 

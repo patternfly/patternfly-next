@@ -13,6 +13,11 @@
     {{#if menu-list-item--IsExpandableReset}}
       {{#> menu-item}}
         {{#> menu-item-main}}
+          {{#if menu-list-item--icon}}
+            {{#> menu-item-icon}}
+              <i class="fa-fw fa-{{menu-list-item--icon}}" aria-hidden="true"></i>
+            {{/menu-item-icon}}
+          {{/if}}
           {{#> menu-item-text}}
             {{{menu-list-item--text}}}
           {{/menu-item-text}}
@@ -21,6 +26,11 @@
     {{else}}
       {{#> menu-item}}
         {{#> menu-item-main}}
+          {{#if menu-list-item--icon}}
+            {{#> menu-item-icon}}
+              <i class="fas fa-fw fa-{{menu-list-item--icon}}" aria-hidden="true"></i>
+            {{/menu-item-icon}}
+          {{/if}}
           {{#> menu-item-text}}
             {{{menu-list-item--text}}}
           {{/menu-item-text}}
@@ -32,6 +42,11 @@
     {{#> menu-item}}
       {{#> menu-item-main}}
         {{> menu-item-toggle-icon menu-item-toggle-icon--IsDrillup="true"}}
+        {{#if menu-list-item--icon}}
+          {{#> menu-item-icon}}
+            <i class="fas fa-fw fa-{{menu-list-item--icon}}" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+        {{/if}}
         {{#> menu-item-text}}
           {{{menu-list-item--text}}}
         {{/menu-item-text}}
@@ -40,6 +55,11 @@
   {{else if menu-list-item--text}}
     {{#> menu-item}}
       {{#> menu-item-main}}
+        {{#if menu-list-item--icon}}
+          {{#> menu-item-icon}}
+            <i class="fas fa-fw fa-{{menu-list-item--icon}}" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+        {{/if}}
         {{#> menu-item-text}}
           {{{menu-list-item--text}}}
         {{/menu-item-text}}

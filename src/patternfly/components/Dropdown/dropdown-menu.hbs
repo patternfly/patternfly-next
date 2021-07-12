@@ -1,6 +1,8 @@
 <{{#if dropdown-menu--type}}{{dropdown-menu--type}}{{else}}ul{{/if}} class="pf-c-dropdown__menu{{#if dropdown-menu--modifier}} {{dropdown-menu--modifier}}{{/if}}"
   {{#unless dropdown--template--SplitButton}}
-    aria-labelledby="{{dropdown--id}}-button"
+    {{#unless dropdown-menu--type}}
+      aria-labelledby="{{dropdown--id}}-button"
+    {{/unless}}
   {{/unless}}
   {{#unless dropdown--IsExpanded}}
     hidden

@@ -1670,6 +1670,8 @@ import './Menu.css'
 | `.pf-c-menu__item-action-icon` | `<span>` | Initiates the menu item action icon. |
 | `.pf-c-menu__item-external-icon` | `<span>` | Initiates the menu item external icon. |
 | `.pf-c-menu__footer` | `<div>` | Initiates the menu footer. |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-menu__list`, `.pf-c-menu__list-item`, `.pf-c-menu__group` | Modifies a menu element to be hidden, at optional breakpoint. |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-menu__list`, `.pf-c-menu__list-item`, `.pf-c-menu__group` | Modifies a menu element to be shown, at optional breakpoint. |
 | `.pf-m-favorite` | `.pf-c-menu__item-action` | Modifies the menu item action to handle the favorite icon. |
 | `.pf-m-favorited` | `.pf-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
 | `.pf-m-selected` | `.pf-c-menu__item` | Modifies the menu item to be selected. |
@@ -1681,6 +1683,7 @@ import './Menu.css'
 | `.pf-m-drilldown` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "drill down". |
 | `.pf-m-current-path` | `.pf-c-menu.pf-m-drilldown .pf-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
+| `.pf-m-static` | `.pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled static state. |
 | `--pf-c-menu--Width: {width}` | `.pf-c-menu` | Modifies the width of the menu. The default value is `auto`. |
 | `--pf-c-menu__content--MaxHeight: {height}` | `.pf-c-menu__content` | Modifies the height of the menu content. Update this value when header and/or footer elements are intended to be fixed. |
 | `--pf-c-menu__content--Height: {height}` | `.pf-c-menu` | Modifies the height of the drilldown menu content. The default value is `auto`. |

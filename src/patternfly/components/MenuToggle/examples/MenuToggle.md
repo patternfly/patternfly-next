@@ -143,6 +143,19 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
+### With image and text
+```hbs
+{{#> menu-toggle}}
+  {{> menu-toggle-image}}
+  {{#> menu-toggle-text}}
+    Ned Username
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ### Full height
 ```hbs
 {{#> menu-toggle menu-toggle--modifier="pf-m-full-height"}}
@@ -169,6 +182,7 @@ import './MenuToggle.css'
 | -- | -- | -- |
 | `.pf-c-menu-toggle` | `<button>` | Initiates the menu toggle component. |
 | `.pf-c-menu-toggle__icon` | `<span>` | Defines the menu toggle component icon. |
+| `.pf-c-menu-toggle__image` | `<span>` | Defines the menu toggle component image. |
 | `.pf-c-menu-toggle__text` | `<span>` | Defines the menu toggle component text. |
 | `.pf-c-menu-toggle__count` | `<span>` | Defines the menu toggle component count. |
 | `.pf-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |
