@@ -207,3 +207,23 @@
 .pf-c-menu-toggle__toggle-icon {
   margin-right: var(--pf-c-menu-toggle__toggle-icon--MarginRight);
 }
+
+@include pf-m-theme-dark {
+  --pf-c-menu-toggle--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--active--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--focus--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--m-expanded--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-menu-toggle--before--BorderTopColor: transparent;
+  --pf-c-menu-toggle--before--BorderRightColor: transparent;
+  --pf-c-menu-toggle--before--BorderBottomColor: transparent;
+  --pf-c-menu-toggle--before--BorderLeftColor: transparent;
+  --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-global--BorderColor--400);
+  --pf-c-menu-toggle--disabled--BackgroundColor: var(--pf-global--palette--black-500);
+  --pf-c-menu-toggle--disabled--Color: var(--pf-global--palette--black-100);
+  --pf-c-menu-toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--300);
+
+  &.pf-m-plain {
+    background: transparent;
+  }
+}

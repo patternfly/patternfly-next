@@ -1,3 +1,30 @@
+@import "sass-utilities/colors";
 @import "patternfly-base.scss";
 @import "components/all";
 @import "layouts/all";
+
+// Dark theme workspace stuff
+// stylelint-disable
+.ws-example,
+.ws-lite-example {
+  background: var(--pf-global--palette--BackgroundColor--200) !important;
+}
+
+.ws-preview,
+#main-content {
+  background-color: var(--pf-global--BackgroundColor--200) !important;
+}
+
+.ws-code {
+  color: #000;
+}
+
+.ws-top-nav-link.pf-c-nav__link {
+  &,
+  &:active,
+  &:hover,
+  &.pf-m-current {
+    color: #fff;
+  }
+}
+// stylelint-enable

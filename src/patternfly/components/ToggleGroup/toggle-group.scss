@@ -134,3 +134,11 @@
 .pf-c-toggle-group__text + .pf-c-toggle-group__icon {
   margin-left: var(--pf-c-toggle-group__icon--text--MarginLeft);
 }
+
+@include pf-m-theme-dark {
+  --pf-c-toggle-group__button--hover--BackgroundColor: var(--pf-global--palette--black-700);
+  --pf-c-toggle-group__button--focus--BackgroundColor: var(--pf-global--palette--black-700);
+  --pf-c-toggle-group__button--disabled--BackgroundColor: var(--pf-global--palette--black-600);
+  --pf-c-toggle-group__button--disabled--Color: var(--pf-global--palette--black-100);
+  --pf-c-toggle-group__button--m-selected--BackgroundColor: var(--pf-global--primary-color--300);
+}

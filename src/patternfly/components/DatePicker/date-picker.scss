@@ -57,3 +57,8 @@
     transform: translateY(var(--pf-c-date-picker--m-top__calendar--TranslateY));
   }
 }
+
+@include pf-m-theme-dark {
+  --pf-c-date-picker__calendar--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-date-picker__calendar--Top: 100%;
+}

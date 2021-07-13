@@ -294,3 +294,7 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
   }
 }
 // stylelint-enable
+
+@include pf-m-theme-dark {
+  --pf-c-pagination--m-sticky--BackgroundColor: var(--pf-global--BackgroundColor--300);
+}

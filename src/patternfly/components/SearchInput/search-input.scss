@@ -205,3 +205,16 @@
 .pf-c-search-input__menu-item-text {
   flex-grow: 1;
 }
+
+@include pf-m-theme-dark {
+  --pf-c-search-input__text--before--BorderColor: transparent;
+  --pf-c-search-input__text--after--BorderBottomColor: var(--pf-global--BorderColor--400);
+
+  background-color: var(--pf-global--BackgroundColor--400);
+
+  .pf-c-search-input__text {
+    &::before {
+      border-bottom-color: var(--pf-global--BorderColor--400);
+    }
+  }
+}

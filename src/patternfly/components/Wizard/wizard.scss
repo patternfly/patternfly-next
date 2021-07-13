@@ -557,3 +557,10 @@
 .pf-c-wizard__footer-cancel {
   margin-left: var(--pf-c-wizard__footer-cancel--MarginLeft);
 }
+
+@include pf-m-theme-dark {
+  --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--disabled-color--300);
+  --pf-c-wizard__nav-link--m-disabled--before--Color: var(--pf-global--disabled-color--300);
+  --pf-c-wizard__nav--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-wizard__outer-wrap--BackgroundColor: var(--pf-global--BackgroundColor--300);
+}

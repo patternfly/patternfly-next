@@ -111,3 +111,9 @@
 .pf-c-chip__text + .pf-c-chip__icon {
   margin-left: var(--pf-c-chip__icon--MarginLeft);
 }
+
+@include pf-m-theme-dark {
+  --pf-c-chip--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-chip--before--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-chip--m-draggable--BackgroundColor: var(--pf-global--palette--black-600);
+}

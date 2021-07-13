@@ -81,3 +81,7 @@
 .pf-c-helper-text__item-text {
   color: var(--pf-c-helper-text__item-text--Color);
 }
+
+@include pf-m-theme-dark {
+  --pf-c-helper-text__item-text--m-success--Color: var(--pf-global--success-color--100);
+}

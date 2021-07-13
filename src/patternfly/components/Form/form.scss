@@ -465,3 +465,7 @@
     }
   }
 }
+
+@include pf-m-theme-dark {
+  --pf-c-form__helper-text--m-success--Color: var(--pf-global--success-color--100);
+}

@@ -153,3 +153,11 @@
 .pf-c-code-editor__tab-icon + .pf-c-code-editor__tab-text {
   margin-left: var(--pf-c-code-editor__tab-icon--text--MarginLeft);
 }
+
+@include pf-m-theme-dark {
+  .pf-c-code-editor__controls {
+    > * + * {
+      border-left: 1px solid var(--pf-global--palette--black-700);
+    }
+  }
+}

@@ -588,3 +588,25 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 }
 // stylelint-enable
+
+@include pf-m-theme-dark {
+  --pf-c-tabs--m-color-scheme--light-300__link--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-tabs--m-color-scheme--light-300__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-tabs__scroll-button--BackgroundColor: transparent;
+
+  &.pf-m-box {
+    .pf-c-tabs__item.pf-m-current {
+      .pf-c-tabs__link {
+        background-color: var(--pf-global--BackgroundColor--100);
+      }
+    }
+
+    &.pf-m-color-scheme--light-300 {
+      --pf-c-tabs__item--m-current__link--BackgroundColor: var(--pf-c-tabs--m-color-scheme--light-300__item--m-current__link--BackgroundColor);
+
+      .pf-c-tabs__link {
+        background-color: var(--pf-c-tabs--m-color-scheme--light-300__item--m-current__link--BackgroundColor);
+      }
+    }
+  }
+}
