@@ -283,35 +283,36 @@
   --pf-global--FontWeight--bold: var(--pf-global--FontWeight--overpass--bold);
 }
 
+// Dark theme overrides
 @include pf-m-theme-dark {
   // palette changes
-  --pf-global--palette--black-50: #{$pf-color-black-50};
-  --pf-global--palette--black-100: #{$pf-color-black-100};
-  --pf-global--palette--black-200: #{$pf-color-black-200};
-  --pf-global--palette--black-300: #{$pf-color-black-300};
-  --pf-global--palette--black-400: #{$pf-color-black-400};
-  --pf-global--palette--black-500: #{$pf-color-black-500};
-  --pf-global--palette--black-600: #{$pf-color-black-600};
-  --pf-global--palette--black-700: #{$pf-color-black-700};
-  --pf-global--palette--black-800: #{$pf-color-black-800};
-  --pf-global--palette--black-900: #{$pf-color-black-900};
-  --pf-global--palette--red-9999: #{$pf-color-red-9999};
-  --pf-global--palette--red-8888: #{$pf-color-red-8888};
-  --pf-global--palette--blue-300: #{$pf-color-blue-300};
+  --pf-global--palette--black-50: #{$pf-theme-dark-color-black-50};
+  --pf-global--palette--black-100: #{$pf-theme-dark-color-black-100};
+  --pf-global--palette--black-200: #{$pf-theme-dark-color-black-200};
+  --pf-global--palette--black-300: #{$pf-theme-dark-color-black-300};
+  --pf-global--palette--black-400: #{$pf-theme-dark-color-black-400};
+  --pf-global--palette--black-500: #{$pf-theme-dark-color-black-500};
+  --pf-global--palette--black-600: #{$pf-theme-dark-color-black-600};
+  --pf-global--palette--black-700: #{$pf-theme-dark-color-black-700};
+  --pf-global--palette--black-800: #{$pf-theme-dark-color-black-800};
+  --pf-global--palette--black-900: #{$pf-theme-dark-color-black-900};
+  --pf-global--palette--red-9999: #{$pf-theme-dark-color-red-9999};
+  --pf-global--palette--red-8888: #{$pf-theme-dark-color-red-8888};
+  --pf-global--palette--blue-300: #{$pf-theme-dark-color-blue-300};
 
   // background colors
-  --pf-global--BackgroundColor--100: var(--pf-global--palette--black-800); // primary
-  --pf-global--BackgroundColor--200: var(--pf-global--palette--black-900); // secondary
-  --pf-global--BackgroundColor--300: var(--pf-global--palette--black-700); // floaty
-  --pf-global--BackgroundColor--400: var(--pf-global--palette--black-600); // form control & menu item hover (on floaty bg)
-  --pf-global--BorderColor--100: var(--pf-global--palette--black-500); // primary
-  --pf-global--BorderColor--200: var(--pf-global--palette--black-500); // secondary
+  --pf-global--BackgroundColor--100: var(--pf-global--palette--black-800); // primary background color
+  --pf-global--BackgroundColor--200: var(--pf-global--palette--black-900); // secondary background color
+  --pf-global--BackgroundColor--300: var(--pf-global--palette--black-700); // floats on top of other elements
+  --pf-global--BackgroundColor--400: var(--pf-global--palette--black-600); // form control & item hover on --pf-global--BackgroundColor--300
+  --pf-global--BorderColor--100: var(--pf-global--palette--black-500); // primary border color
+  --pf-global--BorderColor--200: var(--pf-global--palette--black-500); // secondary border color
   --pf-global--BorderColor--300: var(--pf-global--palette--black-400);
   --pf-global--BorderColor--400: var(--pf-global--palette--black-200); // form control bottom border
 
   // text colors
-  --pf-global--Color--100: #fff;
-  --pf-global--Color--200: var(--pf-global--palette--black-200);
+  --pf-global--Color--100: var(--pf-global--palette--white); // primary text color
+  --pf-global--Color--200: var(--pf-global--palette--black-200); // secondary text color
   --pf-global--active-color--100: var(--pf-global--palette--blue-300);
   --pf-global--primary-color--100: var(--pf-global--palette--blue-300); // primary blue against dark background - background, text, etc
   --pf-global--primary-color--300: var(--pf-global--palette--blue-400); // primary blue with white text on top for contrast
@@ -353,30 +354,30 @@
   --pf-global--icon--Color--light: var(--pf-global--palette--black-200);
   --pf-global--icon--Color--dark: var(--pf-global--palette--black-200);
 
-  // shadows
-  --pf-global--BoxShadow--sm: 0 .0625rem .125rem 0 rgba(3, 3, 3, .48), 0 0 .125rem 0 rgba(3, 3, 3, .24);
-  --pf-global--BoxShadow--sm-top: 0 -.125rem .25rem -.0625rem rgba(3, 3, 3, .64);
-  --pf-global--BoxShadow--sm-right: .125rem 0 .25rem -.0625rem rgba(3, 3, 3, .64);
-  --pf-global--BoxShadow--sm-bottom: 0 .125rem .25rem -.0625rem rgba(3, 3, 3, .64);
-  --pf-global--BoxShadow--sm-left: -.125rem 0 .25rem -.0625rem rgba(3, 3, 3, .64);
-  --pf-global--BoxShadow--md: 0 .25rem .5rem 0 rgba(3, 3, 3, .48), 0 0 .25rem 0 rgba(3, 3, 3, .24);
-  --pf-global--BoxShadow--md-top: 0 -.5rem .5rem -.375rem rgba(3, 3, 3, .72);
-  --pf-global--BoxShadow--md-right: .5rem 0 .5rem -.375rem rgba(3, 3, 3, .72);
-  --pf-global--BoxShadow--md-bottom: 0 .5rem .5rem -.375rem rgba(3, 3, 3, .72);
-  --pf-global--BoxShadow--md-left: -.5rem 0 .5rem -.375rem rgba(3, 3, 3, .72);
-  --pf-global--BoxShadow--lg: 0 .5rem 1rem 0 rgba(3, 3, 3, .64), 0 0 .375rem 0 rgba(3, 3, 3, .32);
-  --pf-global--BoxShadow--lg-top: 0 -.75rem .75rem -.5rem rgba(3, 3, 3, .72);
-  --pf-global--BoxShadow--lg-right: .75rem 0 .75rem -.5rem rgba(3, 3, 3, .72);
-  --pf-global--BoxShadow--lg-bottom: 0 .75rem .75rem -.5rem rgba(3, 3, 3, .72);
-  --pf-global--BoxShadow--lg-left: -.75rem 0 .75rem -.5rem rgba(3, 3, 3, .72);
-  --pf-global--BoxShadow--xl: 0 1rem 2rem 0 rgba(3, 3, 3, .64), 0 0 .5rem 0 rgba(3, 3, 3, .4);
-  --pf-global--BoxShadow--xl-top: 0 -1rem 1rem -.5rem rgba(3, 3, 3, .8);
-  --pf-global--BoxShadow--xl-right: 1rem 0 1rem -.5rem rgba(3, 3, 3, .8);
-  --pf-global--BoxShadow--xl-bottom: 0 1rem 1rem -.5rem rgba(3, 3, 3, .8);
-  --pf-global--BoxShadow--xl-left: -1rem 0 1rem -.5rem rgba(3, 3, 3, .8);
-  --pf-global--BoxShadow--inset: inset 0 0 .625rem 0 rgba(3, 3, 3, 1);
+  // Shadows
+  --pf-global--BoxShadow--sm: #{$pf-theme-dark-global--BoxShadow--sm};
+  --pf-global--BoxShadow--sm-top: #{$pf-theme-dark-global--BoxShadow--sm-top};
+  --pf-global--BoxShadow--sm-right: #{$pf-theme-dark-global--BoxShadow--sm-right};
+  --pf-global--BoxShadow--sm-bottom: #{$pf-theme-dark-global--BoxShadow--sm-bottom};
+  --pf-global--BoxShadow--sm-left: #{$pf-theme-dark-global--BoxShadow--sm-left};
+  --pf-global--BoxShadow--md: #{$pf-theme-dark-global--BoxShadow--md};
+  --pf-global--BoxShadow--md-top: #{$pf-theme-dark-global--BoxShadow--md-top};
+  --pf-global--BoxShadow--md-right: #{$pf-theme-dark-global--BoxShadow--md-right};
+  --pf-global--BoxShadow--md-bottom: #{$pf-theme-dark-global--BoxShadow--md-bottom};
+  --pf-global--BoxShadow--md-left: #{$pf-theme-dark-global--BoxShadow--md-left};
+  --pf-global--BoxShadow--lg: #{$pf-theme-dark-global--BoxShadow--lg};
+  --pf-global--BoxShadow--lg-top: #{$pf-theme-dark-global--BoxShadow--lg-top};
+  --pf-global--BoxShadow--lg-right: #{$pf-theme-dark-global--BoxShadow--lg-right};
+  --pf-global--BoxShadow--lg-bottom: #{$pf-theme-dark-global--BoxShadow--lg-bottom};
+  --pf-global--BoxShadow--lg-left: #{$pf-theme-dark-global--BoxShadow--lg-left};
+  --pf-global--BoxShadow--xl: #{$pf-theme-dark-global--BoxShadow--xl};
+  --pf-global--BoxShadow--xl-top: #{$pf-theme-dark-global--BoxShadow--xl-top};
+  --pf-global--BoxShadow--xl-right: #{$pf-theme-dark-global--BoxShadow--xl-right};
+  --pf-global--BoxShadow--xl-bottom: #{$pf-theme-dark-global--BoxShadow--xl-bottom};
+  --pf-global--BoxShadow--xl-left: #{$pf-theme-dark-global--BoxShadow--xl-left};
+  --pf-global--BoxShadow--inset: #{$pf-theme-dark-global--BoxShadow--inset};
 
-  // makes scrollbar dark
+  // dark browser styling
   // stylelint-disable property-no-unknown
   color-scheme: dark;
   // stylelint-enable

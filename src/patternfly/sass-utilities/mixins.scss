@@ -183,6 +183,12 @@
   }
 }
 
+@mixin pf-m-theme-dark {
+  .pf-m-theme-dark {
+    @content;
+  }
+}
+
 // Apply media query if value is passed
 @mixin pf-apply-breakpoint($breakpoint) {
   @if ($breakpoint == "null" or $breakpoint == "base" or $breakpoint == "") {

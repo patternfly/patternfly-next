@@ -79,3 +79,24 @@ $pf-color-red-300:               #7d1007 !default;
 $pf-color-red-400:               #470000 !default;
 $pf-color-red-500:               #2c0000 !default;
 $pf-color-white:                 #fff !default;
+
+// dark theme
+$pf-theme-dark-color-black-50: #e0e0e0;
+$pf-theme-dark-color-black-100: #c6c7c8;
+$pf-theme-dark-color-black-200: #aaabac;
+$pf-theme-dark-color-black-300: #868789;
+$pf-theme-dark-color-black-400: #57585a;
+$pf-theme-dark-color-black-500: #444548;
+$pf-theme-dark-color-black-600: #36373a;
+$pf-theme-dark-color-black-700: #26292d;
+$pf-theme-dark-color-black-800: #1b1d21;
+$pf-theme-dark-color-black-850: #212427;
+$pf-theme-dark-color-black-900: #0f1214;
+$pf-theme-dark-color-black-1000: #030303;
+$pf-theme-dark-color-red-9999: #fe5142;
+$pf-theme-dark-color-red-8888: #fe6a5d;
+$pf-theme-dark-color-blue-300: #1fa7f8;
+$pf-theme-dark-global--success-color--100: $pf-color-green-400;
+$pf-theme-dark-global--warning-color--200: $pf-color-gold-300;
+$pf-theme-dark-global--danger-color--100: $pf-theme-dark-color-red-9999;
+$pf-theme-dark-global--danger-color--200: $pf-theme-dark-color-red-8888;

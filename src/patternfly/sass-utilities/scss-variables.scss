@@ -309,3 +309,36 @@ $pf-global--spacer-map: (
   "3xl": "var(--pf-global--spacer--3xl)",
   "4xl": "var(--pf-global--spacer--4xl)"
 );
+
+// dark theme
+// Shadows
+// small
+$pf-theme-dark-global--BoxShadow--sm: 0 pf-size-prem(1px) pf-size-prem(2px) 0 rgba($pf-theme-dark-color-black-1000, .48), 0 0 pf-size-prem(2px) 0 rgba($pf-theme-dark-color-black-1000, .24) !default;
+$pf-theme-dark-global--BoxShadow--sm-top: 0 pf-size-prem(-2px) pf-size-prem(4px) pf-size-prem(-1px) rgba($pf-theme-dark-color-black-1000, .64) !default;
+$pf-theme-dark-global--BoxShadow--sm-right: pf-size-prem(2px) 0 pf-size-prem(4px) pf-size-prem(-1px) rgba($pf-theme-dark-color-black-1000, .64) !default;
+$pf-theme-dark-global--BoxShadow--sm-bottom: 0 pf-size-prem(2px) pf-size-prem(4px) pf-size-prem(-1px) rgba($pf-theme-dark-color-black-1000, .64) !default;
+$pf-theme-dark-global--BoxShadow--sm-left: pf-size-prem(-2px) 0 pf-size-prem(4px) pf-size-prem(-1px) rgba($pf-theme-dark-color-black-1000, .64) !default;
+
+// medium
+$pf-theme-dark-global--BoxShadow--md: 0 pf-size-prem(4px) pf-size-prem(8px) pf-size-prem(0) rgba($pf-theme-dark-color-black-1000, .48), 0 0 pf-size-prem(4px) 0 rgba($pf-theme-dark-color-black-1000, .24) !default;
+$pf-theme-dark-global--BoxShadow--md-top: 0 pf-size-prem(-8px) pf-size-prem(8px) pf-size-prem(-6px) rgba($pf-theme-dark-color-black-1000, .72) !default;
+$pf-theme-dark-global--BoxShadow--md-right: pf-size-prem(8px) 0 pf-size-prem(8px) pf-size-prem(-6px) rgba($pf-theme-dark-color-black-1000, .72) !default;
+$pf-theme-dark-global--BoxShadow--md-bottom: 0 pf-size-prem(8px) pf-size-prem(8px) pf-size-prem(-6px) rgba($pf-theme-dark-color-black-1000, .72) !default;
+$pf-theme-dark-global--BoxShadow--md-left: pf-size-prem(-8px) 0 pf-size-prem(8px) pf-size-prem(-6px) rgba($pf-theme-dark-color-black-1000, .72) !default;
+
+// large
+$pf-theme-dark-global--BoxShadow--lg: 0 pf-size-prem(8px) pf-size-prem(16px) 0 rgba($pf-theme-dark-color-black-1000, .64), 0 0 pf-size-prem(6px) 0 rgba($pf-theme-dark-color-black-1000, .32) !default;
+$pf-theme-dark-global--BoxShadow--lg-top: 0 pf-size-prem(-12px) pf-size-prem(12px) pf-size-prem(-8px) rgba($pf-theme-dark-color-black-1000, .72) !default;
+$pf-theme-dark-global--BoxShadow--lg-right: pf-size-prem(12px) 0 pf-size-prem(12px) pf-size-prem(-8px) rgba($pf-theme-dark-color-black-1000, .72) !default;
+$pf-theme-dark-global--BoxShadow--lg-bottom: 0 pf-size-prem(12px) pf-size-prem(12px) pf-size-prem(-8px) rgba($pf-theme-dark-color-black-1000, .72) !default;
+$pf-theme-dark-global--BoxShadow--lg-left: pf-size-prem(-12px) 0 pf-size-prem(12px) pf-size-prem(-8px) rgba($pf-theme-dark-color-black-1000, .72) !default;
+
+// x-large
+$pf-theme-dark-global--BoxShadow--xl: 0 pf-size-prem(16px) pf-size-prem(32px) 0 rgba($pf-theme-dark-color-black-1000, .64), 0 0 pf-size-prem(8px) 0 rgba($pf-theme-dark-color-black-1000, .4) !default;
+$pf-theme-dark-global--BoxShadow--xl-top: 0 pf-size-prem(-16px) pf-size-prem(16px) pf-size-prem(-8px) rgba($pf-theme-dark-color-black-1000, .8) !default;
+$pf-theme-dark-global--BoxShadow--xl-right: pf-size-prem(16px) 0 pf-size-prem(16px) pf-size-prem(-8px) rgba($pf-theme-dark-color-black-1000, .8) !default;
+$pf-theme-dark-global--BoxShadow--xl-bottom: 0 pf-size-prem(16px) pf-size-prem(16px) pf-size-prem(-8px) rgba($pf-theme-dark-color-black-1000, .8) !default;
+$pf-theme-dark-global--BoxShadow--xl-left: pf-size-prem(-16px) 0 pf-size-prem(16px) pf-size-prem(-8px) rgba($pf-theme-dark-color-black-1000, .8) !default;
+
+// inset
+$pf-theme-dark-global--BoxShadow--inset: inset 0 0 pf-size-prem(10) 0 $pf-theme-dark-color-black-1000 !default;
