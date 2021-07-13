@@ -109,6 +109,21 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--m-light-200--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-masthead--m-light-200__main--BorderBottomColor: var(--pf-global--BorderColor--100);
 
+  // Dropdown
+  --pf-c-masthead--c-dropdown__toggle--BorderTopColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-dropdown__toggle--BorderRightColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-dropdown__toggle--BorderLeftColor: var(--pf-global--palette--black-700);
+
+  // Context selector
+  --pf-c-masthead--c-context-selector__toggle--BorderTopColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-context-selector__toggle--BorderRightColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-context-selector__toggle--BorderLeftColor: var(--pf-global--palette--black-700);
+
+  // Menu toggle
+  --pf-c-masthead--c-menu-toggle--before--BorderTopColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-menu-toggle--before--BorderRightColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-menu-toggle--before--BorderLeftColor: var(--pf-global--palette--black-700);
+
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
   }
@@ -172,6 +187,24 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   .pf-c-toolbar__item {
     display: flex;
     align-items: center;
+  }
+
+  .pf-c-dropdown__toggle {
+    --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown__toggle--BorderTopColor);
+    --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown__toggle--BorderRightColor);
+    --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown__toggle--BorderLeftColor);
+  }
+
+  .pf-c-context-selector__toggle {
+    --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--c-context-selector__toggle--BorderTopColor);
+    --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector__toggle--BorderRightColor);
+    --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector__toggle--BorderLeftColor);
+  }
+
+  .pf-c-menu-toggle {
+    --pf-c-menu-toggle--before--BorderTopColor: var(--pf-c-masthead--c-menu-toggle--before--BorderTopColor);
+    --pf-c-menu-toggle--before--BorderRightColor: var(--pf-c-masthead--c-menu-toggle--before--BorderRightColor);
+    --pf-c-menu-toggle--before--BorderLeftColor: var(--pf-c-masthead--c-menu-toggle--before--BorderLeftColor);
   }
 }
 
