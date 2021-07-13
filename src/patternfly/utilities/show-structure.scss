@@ -1,0 +1,199 @@
+// stylelint-disable
+// Currently showing annotations for all previews
+.ws-preview-html *,
+// But instead, a button could add .pf-u-show-structure to any element to turn on annotations for it and its contents
+.pf-u-show-structure,
+.pf-u-show-structure * {
+  border: 1px solid var(--pf-global--Color--light-300) !important;
+  padding: var(--pf-global--spacer--md) var(--pf-global--spacer--xs) var(--pf-global--spacer--xs) var(--pf-global--spacer--xs) !important;
+  margin: var(--pf-global--spacer--xs) var(--pf-global--spacer--sm) var(--pf-global--spacer--sm) var(--pf-global--spacer--sm) !important;
+  position: relative !important;
+  overflow-x: visible !important;
+  width: auto !important;
+
+  &:before {
+    transition: .3s all ease-in-out;
+    transform-style: preserve-3d;
+    content: '.' attr(class);
+    font-size: var(--pf-global--FontSize--xs);
+    font-weight: normal;
+    padding-left: var(--pf-global--spacer--xs);
+    padding-right: var(--pf-global--spacer--sm);
+    background-color: var(--pf-global--BackgroundColor--light-100);
+    color: darkmagenta;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    font-family: sans-serif;
+  }
+  
+  &:hover {
+    &:before {
+      width: fit-content;
+      height: fit-content;
+      font-size: var(--pf-global--FontSize--sm);
+      background: darkmagenta;
+      color: var(--pf-global--Color--light-100);
+      z-index: 10000;
+    }
+    border-color: darkmagenta !important;
+  }
+}
+
+.ws-preview-html,
+.pf-u-show-structure {
+  // Add the element name for common elements
+  @each $element in a,
+  abbr,
+  acronym,
+  address,
+  applet,
+  area,
+  article,
+  aside,
+  audio,
+  b,
+  base,
+  basefont,
+  bdi,
+  bdo,
+  bgsound,
+  big,
+  blink,
+  blockquote,
+  body,
+  br,
+  button,
+  canvas,
+  caption,
+  center,
+  cite,
+  code,
+  col,
+  colgroup,
+  command,
+  content,
+  data,
+  datalist,
+  dd,
+  del,
+  details,
+  dfn,
+  dialog,
+  dir,
+  div,
+  dl,
+  dt,
+  element,
+  em,
+  embed,
+  fieldset,
+  figcaption,
+  figure,
+  font,
+  footer,
+  form,
+  frame,
+  frameset,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  head,
+  header,
+  hgroup,
+  hr,
+  html,
+  i,
+  iframe,
+  image,
+  img,
+  input,
+  ins,
+  isindex,
+  kbd,
+  keygen,
+  label,
+  legend,
+  li,
+  link,
+  listing,
+  main,
+  map,
+  mark,
+  marquee,
+  menu,
+  menuitem,
+  meta,
+  meter,
+  multicol,
+  nav,
+  nobr,
+  noembed,
+  noframes,
+  noscript,
+  object,
+  ol,
+  optgroup,
+  option,
+  output,
+  p,
+  param,
+  picture,
+  plaintext,
+  pre,
+  progress,
+  q,
+  rp,
+  rt,
+  rtc,
+  ruby,
+  s,
+  samp,
+  script,
+  section,
+  select,
+  shadow,
+  slot,
+  small,
+  source,
+  spacer,
+  span,
+  strike,
+  strong,
+  style,
+  sub,
+  summary,
+  sup,
+  table,
+  tbody,
+  td,
+  template,
+  textarea,
+  tfoot,
+  th,
+  thead,
+  time,
+  title,
+  tr,
+  track,
+  tt,
+  u,
+  ul,
+  var,
+  video,
+  wbr {
+    #{$element} {
+      &:before {
+        content: '#{$element}'
+      }
+      &[class]:before {
+        content: '#{$element}.' attr(class);
+      }
+    }
+  }
+}
+// stylelint-enable
