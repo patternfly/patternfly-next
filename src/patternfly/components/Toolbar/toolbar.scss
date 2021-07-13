@@ -15,6 +15,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Group
   --pf-c-toolbar__group--Display: flex;
+  --pf-c-toolbar__group--RowGap: var(--pf-global--spacer--sm);
 
   // Sticky
   --pf-c-toolbar--m-sticky-top--ZIndex: var(--pf-global--ZIndex--xs);
@@ -27,6 +28,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Content section
   --pf-c-toolbar__content-section--Display: flex;
+  --pf-c-toolbar__content-section--RowGap: var(--pf-global--spacer--sm);
 
   // Insets
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
@@ -161,6 +163,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   align-items: center;
   margin-right: var(--pf-c-toolbar--spacer);
+  row-gap: var(--pf-c-toolbar__group--RowGap);
 
   // Button group
   &.pf-m-button-group {
@@ -298,6 +301,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @include pf-hidden-visible(var(--pf-c-toolbar__content-section--Display));
 
   width: 100%;
+  row-gap: var(--pf-c-toolbar__content-section--RowGap);
 }
 
 // Expandable content
