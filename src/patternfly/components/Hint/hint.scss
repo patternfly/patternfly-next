@@ -73,3 +73,8 @@
     margin-right: var(--pf-c-hint__footer--child--MarginRight);
   }
 }
+
+@include pf-m-theme-dark {
+  --pf-c-hint--BackgroundColor: var(--pf-global--BackgroundColor--400);
+  --pf-c-hint--BorderColor: var(--pf-global--BorderColor--300);
+}

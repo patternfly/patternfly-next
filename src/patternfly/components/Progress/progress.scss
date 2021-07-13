@@ -201,3 +201,8 @@
   background-color: var(--pf-c-progress__indicator--BackgroundColor);
 }
 
+@include pf-m-theme-dark {
+  --pf-c-progress--m-inside__measure--Color: var(--pf-global--palette--black-900);
+  --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--palette--black-900);
+  --pf-c-progress--m-warning--m-inside__measure--Color: var(--pf-global--palette--black-900);
+}

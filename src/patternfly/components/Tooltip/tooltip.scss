@@ -86,3 +86,8 @@
   pointer-events: none;
   background-color: var(--pf-c-tooltip__content--BackgroundColor);
 }
+
+@include pf-m-theme-dark {
+  --pf-c-tooltip--BoxShadow: none;
+  --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--300);
+}

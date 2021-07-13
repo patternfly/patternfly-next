@@ -136,3 +136,13 @@
   margin-top: var(--pf-c-popover__footer--MarginTop);
 }
 
+@include pf-m-theme-dark {
+  --pf-c-popover--BoxShadow: none;
+  --pf-c-popover__arrow--BoxShadow: none;
+  --pf-c-popover__arrow--BackgroundColor: var(--pf-c-popover__content--BackgroundColor);
+
+  &,
+  .pf-c-popover__arrow {
+    border: 4px solid var(--pf-global--BorderColor--400);
+  }
+}

@@ -134,3 +134,10 @@
   font-size: var(--pf-c-tile__icon--FontSize);
   color: var(--pf-c-tile__icon--Color);
 }
+
+@include pf-m-theme-dark {
+  --pf-c-tile--m-disabled--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-tile--m-disabled__title--Color: var(--pf-global--disabled-color--300);
+  --pf-c-tile--m-disabled__icon--Color: var(--pf-global--disabled-color--300);
+  --pf-c-tile--m-disabled__body--Color: var(--pf-global--disabled-color--300);
+}

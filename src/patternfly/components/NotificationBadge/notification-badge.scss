@@ -116,3 +116,7 @@
 .pf-c-notification-badge__count {
   margin-left: var(--pf-c-notification-badge__count--MarginLeft);
 }
+
+@include pf-m-theme-dark {
+  --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--primary-color--300);
+}

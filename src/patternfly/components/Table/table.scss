@@ -1258,3 +1258,14 @@
   --pf-c-table--cell--Width: 100%;
 }
 // stylelint-enable
+
+@include pf-m-theme-dark {
+  .pf-c-table__favorite {
+    .pf-c-button {
+      &:hover,
+      &:focus {
+        --pf-c-button--m-plain--Color: var(--pf-global--palette--gold-100);
+      }
+    }
+  }
+}

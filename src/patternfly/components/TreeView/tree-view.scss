@@ -188,3 +188,8 @@ $pf-c-tree-view--MaxNesting: 10;
   }
 }
 // stylelint-enable
+
+@include pf-m-theme-dark {
+  --pf-c-tree-view__node--hover--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-tree-view__node--focus--BackgroundColor: var(--pf-global--BackgroundColor--300);
+}
