@@ -156,7 +156,7 @@
 
 .pf-c-card__header {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
 
   .pf-c-card__title {
