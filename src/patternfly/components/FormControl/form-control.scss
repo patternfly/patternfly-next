@@ -402,7 +402,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
 
   // chrome's calendar icon for type="date"
   &::-webkit-calendar-picker-indicator {
-    filter: invert(1);
+    filter: #{"invert(1)"};
   }
 
   &[readonly] {
